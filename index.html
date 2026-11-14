@@ -51,7 +51,7 @@ header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
 nav ul{display:flex;gap:28px;list-style:none;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:inherit}
 header:not(.solid) nav{text-shadow:0 1px 10px rgba(0,0,0,.5)}
 footer ul{color:var(--cream2)}
-footer{background:var(--bg3)}
+
 nav a{position:relative;padding:6px 0;transition:color .3s}nav a:hover{color:#F3D692}header.solid nav a:hover{color:var(--amber2)}
 nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--amber);transition:width .4s var(--ease)}nav a:hover::after{width:100%}
 nav.l ul{justify-content:flex-end}nav.r{display:flex;align-items:center;gap:28px}
@@ -157,11 +157,11 @@ section{padding:88px 0}
 .work span{display:block;margin-bottom:6px;font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
 
 /* quote form */
-.quote{position:relative;overflow:hidden;background:url("bg-soft.jpg") center/cover no-repeat;border-top:1px solid var(--line)}
-.quote::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,239,231,.35) 0,rgba(245,239,231,.35) 100%)}
+.quote{position:relative;overflow:hidden;background:url("leaves.jpg") center 30%/cover no-repeat;border-top:1px solid var(--line)}
+.quote::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,239,231,0) 0,rgba(245,239,231,.18) 100%)}
 .quote .wrap{position:relative;z-index:1}
-.quote .wrap>div:first-child{background:rgba(255,252,247,.82);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:22px;padding:28px 30px;box-shadow:0 30px 70px rgba(60,40,10,.14)}
-.quote form{background:rgba(255,252,247,.86);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:22px;padding:26px;box-shadow:0 30px 70px rgba(60,40,10,.14)}
+.quote .wrap>div:first-child{background:rgba(255,252,247,.88);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:22px;padding:28px 30px;box-shadow:0 30px 70px rgba(60,40,10,.14)}
+.quote form{background:rgba(255,252,247,.92);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:22px;padding:26px;box-shadow:0 30px 70px rgba(60,40,10,.14)}
 .quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
 .quote p{color:var(--cream2);margin-bottom:16px;font-size:15.5px}
 .quote .meta{font-family:var(--sans);font-size:14px;color:var(--cream2);display:grid;gap:10px;margin-top:26px}
@@ -176,7 +176,9 @@ textarea{min-height:140px;resize:vertical}
 .chk{display:flex;gap:10px;align-items:flex-start;font-family:var(--sans);font-size:13px;color:var(--cream2);grid-column:1/-1}
 .chk input{width:auto;margin-top:3px}
 
-footer{padding:30px 0 26px;font-family:var(--sans);font-size:13px;color:var(--mute);background:var(--bg2);border-top:1px solid var(--line)}
+footer{position:relative;padding:56px 0 40px;font-family:var(--sans);font-size:13px;color:var(--cream2);background:url("waves.jpg") center 40%/cover no-repeat;border-top:1px solid rgba(255,255,255,.6)}
+footer::before{content:"";position:absolute;inset:0;background:rgba(245,239,231,.22)}
+footer .wrap{position:relative;z-index:1}
 footer .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
 footer ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
 footer .logo{margin:0 0 10px}
@@ -187,7 +189,7 @@ footer .logo{margin:0 0 10px}
   .head,.intro,.band .wrap,.quote .wrap,footer .wrap{grid-template-columns:1fr;gap:30px}
   .portre{max-width:340px;margin:0 auto}
   .cards,.works{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step{border:0;margin:0}
-  form{grid-template-columns:1fr}section{padding:64px 0}.band{padding:70px 0}
+  form{grid-template-columns:1fr}section{padding:64px 0}.band{padding:70px 0}#ajanlat{padding:150px 0 50px!important}
 }
 @media(max-width:480px){.hero h1{font-size:34px}.hero p{font-size:17px}.steps{grid-template-columns:1fr}.btn{padding:14px 22px;font-size:12px}.quote .wrap>div:first-child,.quote form{padding:20px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
@@ -270,7 +272,7 @@ footer .logo{margin:0 0 10px}
   </div>
 </div></div>
 
-<section id="ajanlat" class="quote" style="padding:100px 0"><div class="wrap">
+<section id="ajanlat" class="quote" style="padding:230px 0 70px"><div class="wrap">
   <div>
     <div class="eyebrow rv">Ajánlatkérés</div>
     <h2 class="rv d1" style="margin:12px 0 18px">Kérj <em>ingyenes</em> ajánlatot weboldal készítésre</h2>
