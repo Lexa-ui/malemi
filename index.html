@@ -3,11 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MALEMI – Egyedi weboldal készítés, webdesign és frontend fejlesztés</title>
+<title>Egyedi weboldal készítés | MALEMI – Webdesign és frontend fejlesztés</title>
 <meta name="description" content="MALEMI: egyedi, kézzel kódolt weboldalak vállalkozásoknak. Webdesign és frontend fejlesztés egy kézben – gyors, mobilbarát, SEO-kész oldalak sablonok nélkül. Kérj ajánlatot!">
 <meta property="og:title" content="MALEMI – Egyedi weboldal készítés">
 <meta property="og:description" content="Webdesign és frontend fejlesztés egy kézben. Modern, gyors, mobilbarát weboldalak vállalkozásoknak.">
 <meta property="og:image" content="img/hero.jpg">
+<link rel="icon" type="image/png" href="img/mark.png">
+<link rel="canonical" href="https://www.lexadesign.hu/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hu_HU">
+<meta name="theme-color" content="#F4EEE5">
+<link rel="preload" as="image" href="img/hero.jpg" media="(min-width: 961px)">
+<link rel="preload" as="image" href="img/hero-m.jpg" media="(max-width: 960px)">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -21,8 +28,9 @@
   --serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;--ease:cubic-bezier(.22,.8,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{background:var(--bg);color:var(--cream);font-family:var(--serif);font-size:18px;line-height:1.55;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16.5px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.big,.q,blockquote,.step .k,.num b{font-family:var(--serif)}
 a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 .wrap{width:min(1180px,calc(100% - 48px));margin:0 auto}
 .eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:14px}
@@ -40,40 +48,52 @@ em{font-style:italic;font-weight:300;color:var(--amber2)}
 .rv.in{opacity:1;transform:none}.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
 
 /* header */
-header{position:fixed;top:0;left:0;right:0;z-index:50;color:#F2E9DC;background:rgba(20,17,14,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(217,168,92,.14)}
-header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:12px 0}
-nav ul{display:flex;gap:28px;list-style:none;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#D8CDBD}
-footer nav ul,footer ul{color:var(--mute)}
-nav a{position:relative;padding:6px 0;transition:color .3s}nav a:hover{color:#F0CD8A}
+header{position:fixed;top:0;left:0;right:0;z-index:50;color:#fff;background:linear-gradient(rgba(20,17,14,.55),rgba(20,17,14,0));transition:background .45s,color .45s,box-shadow .45s}
+header.solid{color:var(--cream);background:rgba(247,242,235,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(154,114,54,.22)}
+header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0;min-height:88px}
+nav ul{display:flex;gap:28px;list-style:none;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:inherit}
+header:not(.solid) nav{text-shadow:0 1px 10px rgba(0,0,0,.5)}
+footer ul{color:var(--cream2)}
+footer{background:var(--bg3)}
+nav a{position:relative;padding:6px 0;transition:color .3s}nav a:hover{color:#F3D692}header.solid nav a:hover{color:var(--amber2)}
 nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--amber);transition:width .4s var(--ease)}nav a:hover::after{width:100%}
 nav.l ul{justify-content:flex-end}nav.r{display:flex;align-items:center;gap:28px}
-.nav-cta{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding:10px 20px;border-radius:999px;border:1px solid #D9A85C;color:#F0CD8A}
-.logo{display:flex;align-items:center;gap:12px;margin:0 36px}
-.logo img{height:36px;width:auto;filter:brightness(0) invert(.92) sepia(.4) saturate(1.3)}
+.nav-cta{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding:10px 20px;border-radius:999px;border:1px solid #F3D692;color:#F3D692;transition:all .45s}
+header.solid .nav-cta{border-color:var(--amber);color:var(--amber2)}
+.logo{display:flex;align-items:center;gap:14px;margin:0 30px;height:88px;line-height:1}
+.logo img{height:46px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.35))}
+header.solid .logo img,footer .logo img{filter:none}
+.logo .t{display:flex;flex-direction:column;align-items:flex-start}
+.logo .t b{font-family:var(--sans);font-weight:500;font-size:22px;letter-spacing:.42em;color:inherit}
+header:not(.solid) .logo .t{text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.logo .t small{font-family:var(--sans);font-size:8.5px;letter-spacing:.32em;margin-top:5px;color:#F3D692}
+header.solid .logo .t small,footer .logo .t small{color:var(--amber2)}
+footer .logo .t b{color:var(--cream)}
 .logo .t{display:flex;flex-direction:column;line-height:1}
 .logo .t b{font-family:var(--sans);font-weight:500;font-size:22px;letter-spacing:.44em}
 .logo .t small{font-family:var(--sans);font-size:8.5px;letter-spacing:.34em;color:#D9A85C;margin-top:5px}
-footer .logo img{filter:none}footer .logo .t small{color:var(--amber2)}
-.burger{display:none;position:absolute;right:24px;top:18px;background:none;border:0;cursor:pointer;width:40px;height:40px}
-.burger i{display:block;height:1.5px;background:#F2E9DC;margin:7px 8px}
-#mnav{display:none;position:fixed;inset:0;z-index:60;color:#F2E9DC;background:rgba(20,17,14,.97);padding:90px 36px;font-family:var(--sans);font-size:20px;letter-spacing:.14em;text-transform:uppercase}
+
+.burger{display:none;position:absolute;right:24px;top:24px;background:none;border:0;cursor:pointer;width:40px;height:40px}
+.burger i{display:block;height:1.5px;background:currentColor;margin:7px 8px}
+#mnav{display:none;position:fixed;inset:0;z-index:60;color:var(--cream);background:rgba(247,242,235,.98);padding:90px 36px;font-family:var(--sans);font-size:20px;letter-spacing:.14em;text-transform:uppercase}
 #mnav a{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
 #mnav.open{display:block}
-#mclose{position:absolute;right:28px;top:26px;background:none;border:0;color:#F2E9DC;font-size:30px;cursor:pointer}
+#mclose{position:absolute;right:28px;top:26px;background:none;border:0;color:var(--cream);font-size:30px;cursor:pointer}
 
 /* hero */
-.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:140px 0 90px;overflow:hidden;background:url("img/hero.jpg") center/cover no-repeat}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:160px 0 80px;margin-top:0;overflow:hidden;background:url("img/hero.jpg") center/cover no-repeat}
 .hero{color:#F2E9DC}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,14,.3) 0%,rgba(20,17,14,0) 30%,rgba(20,17,14,.5) 72%,rgba(20,17,14,.6) 100%)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,14,.35) 0%,rgba(20,17,14,0) 30%,rgba(20,17,14,.45) 58%,rgba(20,17,14,.82) 100%)}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(rgba(244,238,229,0),var(--bg))}
-.hero em{color:#F0CD8A}.hero .eyebrow{color:#F0CD8A}.hero .eyebrow::before{background:#F0CD8A}
-.hero .wrap{position:relative;z-index:1;max-width:820px;margin-left:max(24px,calc((100% - 1180px)/2))}
-.hero h1{font-size:clamp(36px,4.4vw,62px);margin:14px 0 18px;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.hero em{color:#F3D692}.hero .eyebrow{color:#F3D692}.hero .eyebrow::before{background:#F3D692}
+.hero .wrap{position:relative;z-index:1;max-width:780px;text-shadow:0 2px 18px rgba(0,0,0,.55);margin-left:max(24px,calc((100% - 1180px)/2))}
+.hero h1{font-size:clamp(36px,4.4vw,60px);margin:14px 0 16px;color:#FFFFFF}
 .hero h1 .line{display:block;overflow:hidden}.hero h1 .line span{display:block;transform:translateY(110%);animation:rise 1.2s var(--ease) forwards}
 .hero h1 .line:nth-child(2) span{animation-delay:.12s}
 @keyframes rise{to{transform:none}}
-.hero p{max-width:560px;font-size:21px;color:#E6DCCC;margin-bottom:30px}
-.hero .acts{display:flex;gap:14px;flex-wrap:wrap}
+.hero p{max-width:600px;font-size:18px;line-height:1.6;color:#FFFFFF;margin-bottom:30px}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap;text-shadow:none}
+.hero .btn-line{border-color:rgba(255,255,255,.75);color:#fff;background:rgba(0,0,0,.18);backdrop-filter:blur(4px)}
 .hero .scroll{position:absolute;right:24px;bottom:34px;font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#E6DCCC;display:flex;align-items:center;gap:12px;z-index:1}
 .hero .scroll i{width:1px;height:50px;background:linear-gradient(var(--amber),transparent);animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
@@ -86,24 +106,28 @@ footer .logo img{filter:none}footer .logo .t small{color:var(--amber2)}
 
 section{padding:88px 0}
 .head{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-bottom:40px}
-.head p{font-size:19px;color:var(--cream2)}
+.head p{font-size:16.5px;color:var(--cream2)}
 
 /* intro / about */
-.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+.portre{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px rgba(60,40,10,.16)}
+.portre img{width:100%;height:100%;object-fit:cover;display:block}
+
+.intro .txt .big{margin-top:14px}
 .intro .big{font-size:clamp(28px,2.8vw,40px);font-style:italic;font-weight:300;line-height:1.2}
-.intro p{color:var(--cream2);margin-bottom:14px}
+.intro p{color:var(--cream2);margin-bottom:14px;font-size:15.5px}
 .intro .num{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
 .num b{display:block;font-weight:300;font-size:44px;line-height:1;color:var(--amber2)}
 .num span{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
 
 /* services */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .card{position:relative;padding:30px 28px;border:1px solid var(--line);border-radius:18px;background:var(--bg3);transition:transform .6s var(--ease),border-color .4s,box-shadow .6s var(--ease);overflow:hidden}
 .card::after{content:"";position:absolute;left:28px;right:28px;bottom:0;height:1px;background:linear-gradient(90deg,var(--amber),transparent);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease)}
 .card:hover{transform:translateY(-6px);border-color:rgba(154,114,54,.6);box-shadow:0 30px 60px rgba(70,50,20,.14)}.card:hover::after{transform:scaleX(1)}
 .card .n{font-family:var(--sans);font-size:11px;letter-spacing:.3em;color:var(--amber);margin-bottom:14px}
 .card h3{font-size:28px;margin-bottom:8px}
-.card p{color:var(--cream2);font-size:17px;margin-bottom:14px}
+.card p{color:var(--cream2);font-size:15.5px;margin-bottom:14px}
 .card ul{list-style:none;font-family:var(--sans);font-size:13.5px;color:var(--cream2);display:grid;gap:8px}
 .card li::before{content:"—";color:var(--amber);margin-right:10px}
 .card.feat{border-color:rgba(154,114,54,.6);background:linear-gradient(180deg,#FBF2E2,var(--bg3))}
@@ -113,17 +137,19 @@ section{padding:88px 0}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
 .step{padding:26px 24px 0 0;border-right:1px solid var(--line);margin-right:24px}.step:last-child{border:0;margin:0}
 .step .k{font-size:50px;font-weight:300;line-height:1;color:var(--amber);font-style:italic}
-.step h3{font-size:25px;margin:10px 0 6px}.step p{font-size:16.5px;color:var(--cream2)}
+.step h3{font-size:25px;margin:10px 0 6px}.step p{font-size:15px;color:var(--cream2)}
 
 /* why – image band */
-.band{position:relative;padding:100px 0;overflow:hidden;background:url("img/bg-soft.jpg") center/cover no-repeat}
-.band::before{content:"";position:absolute;inset:0;background:linear-gradient(var(--bg) 0,rgba(244,238,229,.78) 25%,rgba(244,238,229,.78) 75%,var(--bg) 100%)}
+.band{position:relative;padding:90px 0;overflow:hidden;background:var(--bg2)}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 85% 50%,rgba(217,168,92,.14),transparent 70%)}
 .band .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.band p{color:var(--cream2);margin-bottom:14px}
+.band p{color:var(--cream2);margin-bottom:14px;font-size:15.5px}
 .band .q{font-size:clamp(24px,2.4vw,32px);font-style:italic;border-left:1px solid var(--amber);padding-left:22px;margin:20px 0}
 .ticks{list-style:none;display:grid;gap:12px;margin-top:10px;font-family:var(--sans);font-size:15px;color:var(--cream)}
 .ticks li{display:flex;gap:14px;align-items:flex-start}
+.ticks li span{flex:1}
 .ticks li::before{content:"✦";color:var(--amber);font-size:12px;margin-top:4px}
+.ticks b{font-weight:600}
 
 /* works */
 .works{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -134,9 +160,13 @@ section{padding:88px 0}
 .work span{display:block;margin-bottom:6px;font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
 
 /* quote form */
-.quote{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
-.quote p{color:var(--cream2);margin-bottom:16px}
+.quote{position:relative;overflow:hidden;background:url("img/bg-soft.jpg") center/cover no-repeat;border-top:1px solid var(--line)}
+.quote::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,239,231,.35) 0,rgba(245,239,231,.35) 100%)}
+.quote .wrap{position:relative;z-index:1}
+.quote .wrap>div:first-child{background:rgba(255,252,247,.82);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:22px;padding:28px 30px;box-shadow:0 30px 70px rgba(60,40,10,.14)}
+.quote form{background:rgba(255,252,247,.86);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:22px;padding:26px;box-shadow:0 30px 70px rgba(60,40,10,.14)}
+.quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+.quote p{color:var(--cream2);margin-bottom:16px;font-size:15.5px}
 .quote .meta{font-family:var(--sans);font-size:14px;color:var(--cream2);display:grid;gap:10px;margin-top:26px}
 .quote .meta a{color:var(--amber2)}
 form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -149,72 +179,77 @@ textarea{min-height:140px;resize:vertical}
 .chk{display:flex;gap:10px;align-items:flex-start;font-family:var(--sans);font-size:13px;color:var(--cream2);grid-column:1/-1}
 .chk input{width:auto;margin-top:3px}
 
-footer{padding:40px 0 30px;font-family:var(--sans);font-size:13px;color:var(--mute)}
+footer{padding:30px 0 26px;font-family:var(--sans);font-size:13px;color:var(--mute);background:var(--bg2);border-top:1px solid var(--line)}
 footer .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
 footer ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
 footer .logo{margin:0 0 10px}
 
 @media(max-width:960px){
   nav.l,nav.r{display:none}header .wrap{grid-template-columns:1fr}.logo{margin:0}.burger{display:block}
-  .hero{padding:130px 0 70px;background-image:url("img/hero-m.jpg");background-position:50% center}.hero::before{background:linear-gradient(180deg,rgba(20,17,14,.3) 0%,rgba(20,17,14,.1) 30%,rgba(20,17,14,.7) 60%,var(--bg) 100%)}
+  .hero{padding:120px 0 60px;min-height:92vh;background-image:url("img/hero-m.jpg");background-position:center 20%}.hero::before{background:linear-gradient(180deg,rgba(20,17,14,.3) 0%,rgba(20,17,14,.1) 30%,rgba(20,17,14,.7) 60%,var(--bg) 100%)}
   .head,.intro,.band .wrap,.quote .wrap,footer .wrap{grid-template-columns:1fr;gap:30px}
+  .portre{max-width:340px;margin:0 auto}
   .cards,.works{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step{border:0;margin:0}
   form{grid-template-columns:1fr}section{padding:64px 0}.band{padding:70px 0}
 }
+@media(max-width:480px){.hero h1{font-size:34px}.hero p{font-size:17px}.steps{grid-template-columns:1fr}.btn{padding:14px 22px;font-size:12px}.quote .wrap>div:first-child,.quote form{padding:20px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"MALEMI – Web Design & Frontend","url":"https://www.lexadesign.hu/","email":"contact@lexadesign.hu","telephone":"+36204577808","areaServed":"HU","description":"Egyedi weboldal készítés, webdesign és frontend fejlesztés vállalkozásoknak.","founder":{"@type":"Person","name":"Alexandra"}}</script>
 </head>
 <body>
 
 <header><div class="wrap">
-  <nav class="l"><ul><li><a href="#rolam">Rólam</a></li><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#folyamat">Folyamat</a></li></ul></nav>
+  <nav class="l" aria-label="Fő menü"><ul><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#rolam">Rólam</a></li><li><a href="#folyamat">Folyamat</a></li></ul></nav>
   <a class="logo" href="#top"><img src="img/mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>
-  <nav class="r"><ul><li><a href="#munkaim">Munkáim</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul><a class="nav-cta" href="#ajanlat">Kérj ajánlatot</a></nav>
+  <nav class="r" aria-label="Fő menü 2"><ul><li><a href="#miert">Miért én</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul><a class="nav-cta" href="#ajanlat">Kérj ajánlatot</a></nav>
   <button class="burger" aria-label="Menü" onclick="document.getElementById('mnav').classList.add('open')"><i></i><i></i></button>
 </div></header>
-<div id="mnav"><button id="mclose" aria-label="Bezár" onclick="this.parentNode.classList.remove('open')">×</button>
-  <a href="#rolam">Rólam</a><a href="#szolgaltatasok">Szolgáltatások</a><a href="#folyamat">Folyamat</a><a href="#munkaim">Munkáim</a><a href="#ajanlat">Ajánlatkérés</a><a href="#kapcsolat">Kapcsolat</a></div>
+<nav id="mnav" aria-label="Mobil menü"><button id="mclose" aria-label="Bezár" onclick="this.parentNode.classList.remove('open')">×</button>
+  <a href="#szolgaltatasok">Szolgáltatások</a><a href="#rolam">Rólam</a><a href="#folyamat">Folyamat</a><a href="#miert">Miért én</a><a href="#ajanlat">Ajánlatkérés</a><a href="#kapcsolat">Kapcsolat</a></nav>
 
 <section class="hero" id="top"><div class="wrap">
   <div class="eyebrow">Egyedi weboldal készítés</div>
   <h1><span class="line"><span>Weboldal, ami nem csak szép,</span></span><span class="line"><span><em>hanem ügyfelet hoz.</em></span></span></h1>
   <p>Webdesign és frontend fejlesztés egy kézben: gyors, mobilbarát, keresőbarát oldalak vállalkozásoknak – sablonok és felesleges bővítmények nélkül.</p>
-  <div class="acts"><a class="btn btn-amber" href="#ajanlat">Ingyenes konzultáció <span class="arr">→</span></a><a class="btn btn-line" href="#munkaim">Munkáim</a></div>
+  <div class="acts"><a class="btn btn-amber" href="#ajanlat">Ingyenes konzultáció <span class="arr">→</span></a><a class="btn btn-line" href="#szolgaltatasok">Szolgáltatások <span class="arr">→</span></a></div>
 </div><div class="scroll"><i></i>Görgess</div></section>
 
 <div class="strip"><div class="track">
-  <span>Webdesign</span><span>Frontend fejlesztés</span><span>Kézzel írt kód</span><span>Mobilbarát</span><span>SEO-kész</span><span>Gyors betöltés</span><span>Egy kézben</span>
-  <span>Webdesign</span><span>Frontend fejlesztés</span><span>Kézzel írt kód</span><span>Mobilbarát</span><span>SEO-kész</span><span>Gyors betöltés</span><span>Egy kézben</span>
+  <span>Stratégia</span><span>Dizájn</span><span>Eredmény</span><span>Webdesign</span><span>Frontend fejlesztés</span><span>Kézzel írt kód</span><span>Mobilbarát</span><span>SEO-kész</span>
+  <span>Stratégia</span><span>Dizájn</span><span>Eredmény</span><span>Webdesign</span><span>Frontend fejlesztés</span><span>Kézzel írt kód</span><span>Mobilbarát</span><span>SEO-kész</span>
 </div></div>
 
-<section id="rolam"><div class="wrap intro">
-  <div>
-    <div class="eyebrow rv">Rólam</div>
-    <h2 class="rv d1" style="margin:12px 0 18px">Szia, Alexandra vagyok – a MALEMI mögött <em>egy ember áll.</em></h2>
-    <p class="big rv d2">„Nem sablont igazítok. A vállalkozásodhoz tervezek, és azt kódolom le.”</p>
-  </div>
-  <div>
-    <p class="rv">Webdesigner és frontend fejlesztő vagyok. Nálam a tervezés és a kivitelezés nem válik ketté: ugyanaz a kéz rajzolja meg az oldalt, amelyik megírja a kódját. Így a végeredmény pontosan az lesz, amit a terven láttál – nem egy „majdnem olyan” sablonverzió.</p>
-    <p class="rv d1">Hiszem, hogy egy jó weboldal nem dísz, hanem munkaeszköz: bizalmat épít, keresőben megtalálnak, és a látogatóból ügyfelet csinál. Ezért minden projektet a céljaidból indítok, nem a színekből.</p>
-    <div class="num rv d2"><div><b>1</b><span>kéz, tervtől kódig</span></div><div><b>0</b><span>sablon és plugin</span></div><div><b>100%</b><span>egyedi megoldás</span></div></div>
-  </div>
-</div></section>
-
-<section id="szolgaltatasok" style="padding-top:0"><div class="wrap">
-  <div class="head"><div><div class="eyebrow rv">Szolgáltatások</div><h2 class="rv d1">Minden, amire egy <em>profi weboldalhoz</em> szükséged van</h2></div>
+<section id="szolgaltatasok" style="padding-top:100px"><div class="wrap">
+  <div class="head"><div><div class="eyebrow rv">Szolgáltatások</div><h2 class="rv d1">Weboldal készítés és webdesign <em>szolgáltatások</em></h2></div>
   <p class="rv d2">Egyedi webdesign, kézzel kódolt frontend és vizuális identitás – külön-külön vagy egy csomagban, mindig a te céljaidra szabva.</p></div>
   <div class="cards">
     <div class="card rv"><div class="n">01</div><h3>Egyedi weboldal készítés</h3><p>Bemutatkozó oldal, landing page vagy többoldalas céges weboldal – a nulláról, a te márkádra tervezve.</p>
       <ul><li>Egyedi webdesign, nem sablon</li><li>Kézzel írt, tiszta HTML/CSS/JS</li><li>Mobilbarát, reszponzív felépítés</li><li>Gyors betöltés, SEO-kész szerkezet</li><li>Kapcsolati űrlap, Google Maps, social</li></ul></div>
     <div class="card feat rv d1"><span class="tag">Népszerű</span><div class="n">02 · Csomag</div><h3>Design + Fejlesztés</h3><p>Vizuális identitás és weboldal egy kézből, egységes rendszerként – így minden részlet összeáll.</p>
       <ul><li>Logó és színvilág, tipográfia</li><li>Egyedi webdesign és fejlesztés</li><li>Social media alap arculat</li><li>Domain- és tárhely-beállítás</li><li>1 hónap támogatás átadás után</li></ul></div>
-    <div class="card rv d2"><div class="n">03</div><h3>Weboldal frissítés és karbantartás</h3><p>Van már oldalad, csak elavult vagy lassú? Új köntöst, gyorsítást és mobil-optimalizálást kap.</p>
+    <div class="card rv d2"><div class="n">03</div><h3>Vizuális identitás és logó</h3><p>Logó, színpaletta, tipográfia – stratégiai alapokon, hogy a márkád minden felületen felismerhető legyen.</p>
+      <ul><li>Logókoncepciók és véglegesítés</li><li>Színpaletta és tipográfiai rendszer</li><li>Social media alap arculat</li><li>Névjegykártya és alap nyomdai anyagok</li></ul></div>
+    <div class="card rv d3"><div class="n">04</div><h3>Weboldal frissítés és karbantartás</h3><p>Van már oldalad, csak elavult vagy lassú? Új köntöst, gyorsítást és mobil-optimalizálást kap.</p>
       <ul><li>Meglévő oldal újratervezése</li><li>Sebesség- és mobil-optimalizálás</li><li>Tartalomfrissítés, új aloldalak</li><li>Hibajavítás, böngésző-kompatibilitás</li></ul></div>
   </div>
 </div></section>
 
+<section id="rolam" style="padding-top:0"><div class="wrap intro">
+  <div class="portre rv"><img src="img/portre.jpg" alt="Alexandra – a MALEMI webdesignere és frontend fejlesztője" loading="lazy"></div>
+  <div class="txt">
+    <div class="eyebrow rv">Rólam</div>
+    <h2 class="rv d1" style="margin:12px 0 18px">Webdesigner és frontend fejlesztő, aki <em>a tervet kódolja is.</em></h2>
+    <p class="big rv d2">„A jó dizájn nem csak szép — hanem működik.”</p>
+    <p class="rv">Alexandra vagyok, a MALEMI alapítója. Gyerekkorom óta rajzolok – a digitális tervezésben a rajzolás precizitását és szabadságát találtam meg. Az első projektjeim után megtanultam: a szép vizuál önmagában kevés, stratégia is kell mögé.</p>
+    <p class="rv d1">Nálam a tervezés és a kivitelezés nem válik ketté: ugyanaz a kéz rajzolja meg az oldalt, amelyik megírja a kódját. Nem adom tovább fejlesztőnek – így a végeredmény pontosan az, amit a terven láttál, nem egy „majdnem olyan” sablonverzió.</p>
+    <ul class="ticks rv d2" style="margin-top:18px"><li><span><b>Tudatosság minden pixelben</b> – minden döntés mögött stratégia és szándék áll.</span></li><li><span><b>Az egyediség nem kompromisszum</b> – a márkád saját hangján szóló megoldás, nem sablon.</span></li><li><span><b>Hosszú távú gondolkodás</b> – időtálló rendszer, ami a vállalkozásoddal együtt fejlődik.</span></li></ul>
+    <div class="num rv d2"><div><b>1</b><span>kéz, tervtől kódig</span></div><div><b>0</b><span>sablon és plugin</span></div><div><b>100%</b><span>egyedi megoldás</span></div></div>
+  </div>
+</div></section>
+
 <section id="folyamat" style="padding-top:0"><div class="wrap">
-  <div class="head"><div><div class="eyebrow rv">Folyamat</div><h2 class="rv d1">Négy lépés az <em>új weboldaladig</em></h2></div><p class="rv d2">Átlátható mérföldkövek, meglepetések nélkül. Az első beszélgetés ingyenes és kötelezettségmentes.</p></div>
+  <div class="head"><div><div class="eyebrow rv">Folyamat</div><h2 class="rv d1">Így készül az <em>új weboldalad</em> – négy lépésben</h2></div><p class="rv d2">Átlátható mérföldkövek, meglepetések nélkül. Az első beszélgetés ingyenes és kötelezettségmentes.</p></div>
   <div class="steps">
     <div class="step rv"><div class="k">01</div><h3>Ismerkedés</h3><p>Megbeszéljük, mit csinál a vállalkozásod, kiknek szól, és mit kell elérnie az oldalnak.</p></div>
     <div class="step rv d1"><div class="k">02</div><h3>Koncepció</h3><p>Szerkezet, szövegváz és vizuális irány – látod, mielőtt egy sor kód megszületne.</p></div>
@@ -224,7 +259,7 @@ footer .logo{margin:0 0 10px}
 </div></section>
 
 <div class="band" id="miert"><div class="wrap">
-  <div><div class="eyebrow rv">Miért a MALEMI?</div><h2 class="rv d1" style="margin:12px 0 18px">Mert a weboldalad az <em>első benyomás</em> – és csak egy van belőle.</h2>
+  <div><div class="eyebrow rv">Miért a MALEMI?</div><h2 class="rv d1" style="margin:12px 0 18px">Miért egyedi weboldalt készíttess, <em>ne sablont?</em></h2>
     <div class="q rv d2">A látogató pár másodperc alatt dönt: marad, vagy továbbkattint. Én azért dolgozom, hogy maradjon.</div></div>
   <div>
     <p class="rv">A legtöbb weboldal ugyanabból a pár tucat sablonból készül, és ez látszik is rajta. A MALEMI-nél minden oldal egyedi: a tipográfiától a gombok animációjáig a te márkádhoz igazítva.</p>
@@ -238,23 +273,16 @@ footer .logo{margin:0 0 10px}
   </div>
 </div></div>
 
-<section id="munkaim"><div class="wrap">
-  <div class="head"><div><div class="eyebrow rv">Munkáim</div><h2 class="rv d1">Néhány <em>elkészült</em> weboldal</h2></div><p class="rv d2">Ipari cégtől szolgáltatóig – mindegyik egyedi tervezés, kézzel kódolva.</p></div>
-  <div class="works">
-    <a class="work rv" href="#"><div><span>Céges weboldal</span><b>Brick Field Kft.</b></div></a>
-    <a class="work rv d1" href="#"><div><span>Szolgáltató oldal</span><b>Clear Wolf Production</b></div></a>
-    <a class="work rv d2" href="#"><div><span>Prémium one-page</span><b>Újítók Kft.</b></div></a>
-  </div>
-</div></section>
-
-<section id="ajanlat" class="quote"><div class="wrap">
+<section id="ajanlat" class="quote" style="padding:100px 0"><div class="wrap">
   <div>
     <div class="eyebrow rv">Ajánlatkérés</div>
-    <h2 class="rv d1" style="margin:12px 0 18px">Kérj <em>ingyenes</em> ajánlatot</h2>
-    <p class="rv d2">Írd le röviden, mivel foglalkozol és mit szeretnél az oldaltól – 24 órán belül válaszolok, és egy rövid egyeztetés után konkrét ajánlatot küldök, fix árral és határidővel.</p>
+    <h2 class="rv d1" style="margin:12px 0 18px">Kérj <em>ingyenes</em> ajánlatot weboldal készítésre</h2>
+    <p class="rv d2">Írd le röviden, mivel foglalkozol és mit szeretnél az oldaltól. Minden üzenetet személyesen olvasok, és egy rövid egyeztetés után személyre szabott ajánlatot küldök, fix árral és határidővel. A szabad kapacitás korlátozott – érdemes időben jelezni.</p>
     <div class="meta rv d3" id="kapcsolat">
       <div>✉ &nbsp;<a href="mailto:contact@lexadesign.hu">contact@lexadesign.hu</a></div>
-      <div>◷ &nbsp;Válaszidő: 24 órán belül</div>
+      <div>☏ &nbsp;<a href="tel:+36204577808">+36 20 457 7808</a></div>
+      <div>◎ &nbsp;Magyarország – online és személyesen</div>
+      <div>◷ &nbsp;Válaszidő: 24–48 óra munkanapokon</div>
       <div>✦ &nbsp;Az első konzultáció ingyenes és kötelezettségmentes</div>
     </div>
   </div>
@@ -266,21 +294,22 @@ footer .logo{margin:0 0 10px}
     <div><label for="nev">Név</label><input id="nev" name="Név" type="text" required></div>
     <div><label for="email">E-mail</label><input id="email" name="E-mail" type="email" required></div>
     <div><label for="ceg">Vállalkozás / tevékenység</label><input id="ceg" name="Vállalkozás" type="text"></div>
-    <div><label for="tipus">Mire van szükséged?</label><select id="tipus" name="Típus"><option>Új weboldal</option><option>Meglévő oldal újratervezése</option><option>Design + fejlesztés csomag</option><option>Még nem tudom – beszéljük meg</option></select></div>
+    <div><label for="tipus">Mire van szükséged?</label><select id="tipus" name="Típus"><option>Weboldal tervezés</option><option>Vizuális identitás / logó</option><option>Weboldal + identitás csomag</option><option>Meglévő oldal újratervezése</option><option>Egyéb – beszéljük meg</option></select></div>
     <div class="full"><label for="uzenet">Üzenet</label><textarea id="uzenet" name="Üzenet" placeholder="Pár mondat a vállalkozásodról és arról, mit szeretnél elérni az oldallal…"></textarea></div>
     <label class="chk"><input type="checkbox" required> Elolvastam és elfogadom az <a href="adatvedelem.html" style="color:var(--amber2);text-decoration:underline">adatkezelési tájékoztatót</a>.</label>
-    <div class="full"><button class="btn btn-amber" type="submit">Ajánlatot kérek <span class="arr">→</span></button></div>
+    <div class="full"><button class="btn btn-amber" type="submit">Üzenetet küldök <span class="arr">→</span></button></div>
   </form>
 </div></section>
 
 <footer><div class="wrap">
-  <div><a class="logo" href="#top"><img src="img/mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>© 2025 MALEMI · Egyedi weboldal készítés · Minden jog fenntartva</div>
-  <ul><li><a href="#rolam">Rólam</a></li><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#munkaim">Munkáim</a></li><li><a href="#ajanlat">Ajánlatkérés</a></li><li><a href="impresszum.html">Impresszum</a></li><li><a href="adatvedelem.html">Adatvédelem</a></li></ul>
+  <div><a class="logo" href="#top"><img src="img/mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>© 2025 MALEMI · Egyedi weboldal készítés · <a href="mailto:contact@lexadesign.hu" style="color:var(--amber2)">contact@lexadesign.hu</a> · <a href="tel:+36204577808" style="color:var(--amber2)">+36 20 457 7808</a></div>
+  <ul><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#rolam">Rólam</a></li><li><a href="#miert">Miért én</a></li><li><a href="#ajanlat">Ajánlatkérés</a></li><li><a href="impresszum.html">Impresszum</a></li><li><a href="adatvedelem.html">Adatvédelem</a></li></ul>
 </div></footer>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const hdr=document.querySelector('header');const onS=()=>hdr.classList.toggle('solid',scrollY>60);addEventListener('scroll',onS,{passive:true});onS();
 document.querySelectorAll('#mnav a').forEach(a=>a.onclick=()=>document.getElementById('mnav').classList.remove('open'));
 </script>
 </body>
