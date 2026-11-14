@@ -7,20 +7,17 @@
 <meta name="description" content="MALEMI: egyedi, kézzel kódolt weboldalak vállalkozásoknak. Webdesign és frontend fejlesztés egy kézben – gyors, mobilbarát, SEO-kész oldalak sablonok nélkül. Kérj ajánlatot!">
 <meta property="og:title" content="MALEMI – Egyedi weboldal készítés">
 <meta property="og:description" content="Webdesign és frontend fejlesztés egy kézben. Modern, gyors, mobilbarát weboldalak vállalkozásoknak.">
-<meta property="og:image" content="img/hero.jpg">
-<link rel="icon" type="image/png" href="img/mark.png">
+<meta property="og:image" content="hero.jpg">
+<link rel="icon" type="image/png" href="mark.png">
 <link rel="canonical" href="https://www.lexadesign.hu/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="hu_HU">
 <meta name="theme-color" content="#F4EEE5">
-<link rel="preload" as="image" href="img/hero.jpg" media="(min-width: 961px)">
-<link rel="preload" as="image" href="img/hero-m.jpg" media="(max-width: 960px)">
+<link rel="preload" as="image" href="hero.jpg" media="(min-width: 961px)">
+<link rel="preload" as="image" href="hero-m.jpg" media="(max-width: 960px)">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-@font-face{font-family:"Cormorant Garamond";src:url("fonts/Cormorant.ttf");font-weight:300 700}
-@font-face{font-family:"Cormorant Garamond";src:url("fonts/CormorantItalic.ttf");font-weight:300 700;font-style:italic}
-@font-face{font-family:"DM Sans";src:url("fonts/DMSans.ttf");font-weight:100 900}
 :root{
   --bg:#F4EEE5;--bg2:#ECE4D8;--bg3:#FFFCF7;--line:rgba(154,114,54,.25);--dark:#14110E;
   --cream:#2A2420;--cream2:#5E5248;--mute:#8C7F72;
@@ -81,7 +78,7 @@ footer .logo .t b{color:var(--cream)}
 #mclose{position:absolute;right:28px;top:26px;background:none;border:0;color:var(--cream);font-size:30px;cursor:pointer}
 
 /* hero */
-.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:160px 0 80px;margin-top:0;overflow:hidden;background:url("img/hero.jpg") center/cover no-repeat}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:160px 0 80px;margin-top:0;overflow:hidden;background:url("hero.jpg") center/cover no-repeat}
 .hero{color:#F2E9DC}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,14,.35) 0%,rgba(20,17,14,0) 30%,rgba(20,17,14,.45) 58%,rgba(20,17,14,.82) 100%)}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(rgba(244,238,229,0),var(--bg))}
@@ -160,7 +157,7 @@ section{padding:88px 0}
 .work span{display:block;margin-bottom:6px;font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
 
 /* quote form */
-.quote{position:relative;overflow:hidden;background:url("img/bg-soft.jpg") center/cover no-repeat;border-top:1px solid var(--line)}
+.quote{position:relative;overflow:hidden;background:url("bg-soft.jpg") center/cover no-repeat;border-top:1px solid var(--line)}
 .quote::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,239,231,.35) 0,rgba(245,239,231,.35) 100%)}
 .quote .wrap{position:relative;z-index:1}
 .quote .wrap>div:first-child{background:rgba(255,252,247,.82);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:22px;padding:28px 30px;box-shadow:0 30px 70px rgba(60,40,10,.14)}
@@ -186,7 +183,7 @@ footer .logo{margin:0 0 10px}
 
 @media(max-width:960px){
   nav.l,nav.r{display:none}header .wrap{grid-template-columns:1fr}.logo{margin:0}.burger{display:block}
-  .hero{padding:120px 0 60px;min-height:92vh;background-image:url("img/hero-m.jpg");background-position:center 20%}.hero::before{background:linear-gradient(180deg,rgba(20,17,14,.3) 0%,rgba(20,17,14,.1) 30%,rgba(20,17,14,.7) 60%,var(--bg) 100%)}
+  .hero{padding:120px 0 60px;min-height:92vh;background-image:url("hero-m.jpg");background-position:center 20%}.hero::before{background:linear-gradient(180deg,rgba(20,17,14,.3) 0%,rgba(20,17,14,.1) 30%,rgba(20,17,14,.7) 60%,var(--bg) 100%)}
   .head,.intro,.band .wrap,.quote .wrap,footer .wrap{grid-template-columns:1fr;gap:30px}
   .portre{max-width:340px;margin:0 auto}
   .cards,.works{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step{border:0;margin:0}
@@ -201,7 +198,7 @@ footer .logo{margin:0 0 10px}
 
 <header><div class="wrap">
   <nav class="l" aria-label="Fő menü"><ul><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#rolam">Rólam</a></li><li><a href="#folyamat">Folyamat</a></li></ul></nav>
-  <a class="logo" href="#top"><img src="img/mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>
+  <a class="logo" href="#top"><img src="mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>
   <nav class="r" aria-label="Fő menü 2"><ul><li><a href="#miert">Miért én</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul><a class="nav-cta" href="#ajanlat">Kérj ajánlatot</a></nav>
   <button class="burger" aria-label="Menü" onclick="document.getElementById('mnav').classList.add('open')"><i></i><i></i></button>
 </div></header>
@@ -236,7 +233,7 @@ footer .logo{margin:0 0 10px}
 </div></section>
 
 <section id="rolam" style="padding-top:0"><div class="wrap intro">
-  <div class="portre rv"><img src="img/portre.jpg" alt="Alexandra – a MALEMI webdesignere és frontend fejlesztője" loading="lazy"></div>
+  <div class="portre rv"><img src="portre.jpg" alt="Alexandra – a MALEMI webdesignere és frontend fejlesztője" loading="lazy"></div>
   <div class="txt">
     <div class="eyebrow rv">Rólam</div>
     <h2 class="rv d1" style="margin:12px 0 18px">Webdesigner és frontend fejlesztő, aki <em>a tervet kódolja is.</em></h2>
@@ -302,7 +299,7 @@ footer .logo{margin:0 0 10px}
 </div></section>
 
 <footer><div class="wrap">
-  <div><a class="logo" href="#top"><img src="img/mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>© 2025 MALEMI · Egyedi weboldal készítés · <a href="mailto:contact@lexadesign.hu" style="color:var(--amber2)">contact@lexadesign.hu</a> · <a href="tel:+36204577808" style="color:var(--amber2)">+36 20 457 7808</a></div>
+  <div><a class="logo" href="#top"><img src="mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>© 2025 MALEMI · Egyedi weboldal készítés · <a href="mailto:contact@lexadesign.hu" style="color:var(--amber2)">contact@lexadesign.hu</a> · <a href="tel:+36204577808" style="color:var(--amber2)">+36 20 457 7808</a></div>
   <ul><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#rolam">Rólam</a></li><li><a href="#miert">Miért én</a></li><li><a href="#ajanlat">Ajánlatkérés</a></li><li><a href="impresszum.html">Impresszum</a></li><li><a href="adatvedelem.html">Adatvédelem</a></li></ul>
 </div></footer>
 
