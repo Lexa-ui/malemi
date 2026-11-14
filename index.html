@@ -3,287 +3,285 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Főoldal — MALEMI Web Design & Frontend</title>
-<meta name="description" content="Egyedi weboldalak tervezése és kézzel kódolt frontend fejlesztés vállalkozóknak — egy kézben.">
+<title>MALEMI – Egyedi weboldal készítés, webdesign és frontend fejlesztés</title>
+<meta name="description" content="MALEMI: egyedi, kézzel kódolt weboldalak vállalkozásoknak. Webdesign és frontend fejlesztés egy kézben – gyors, mobilbarát, SEO-kész oldalak sablonok nélkül. Kérj ajánlatot!">
+<meta property="og:title" content="MALEMI – Egyedi weboldal készítés">
+<meta property="og:description" content="Webdesign és frontend fejlesztés egy kézben. Modern, gyors, mobilbarát weboldalak vállalkozásoknak.">
+<meta property="og:image" content="img/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:"Cormorant Garamond";src:url("fonts/Cormorant.ttf");font-weight:300 700}
 @font-face{font-family:"Cormorant Garamond";src:url("fonts/CormorantItalic.ttf");font-weight:300 700;font-style:italic}
 @font-face{font-family:"DM Sans";src:url("fonts/DMSans.ttf");font-weight:100 900}
-@font-face{font-family:"Great Vibes";src:url("fonts/GreatVibes.ttf")}
 :root{
-  --paper:#F5EFE7;--paper-2:#EDE4D9;--sand:#DFD2C2;--ink-2:#5A4F46;--mute:#8E8176;
-  --gold:#A48D78;--gold-hi:#D9C7B2;--gold-lo:#6F5C4C;--ink:#2A2724;
-  --serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;
-  --ease:cubic-bezier(.22,.8,.2,1);
+  --bg:#F4EEE5;--bg2:#ECE4D8;--bg3:#FFFCF7;--line:rgba(154,114,54,.25);--dark:#14110E;
+  --cream:#2A2420;--cream2:#5E5248;--mute:#8C7F72;
+  --amber:#B8893F;--amber2:#9A7236;--amber3:#7A5A28;
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;--ease:cubic-bezier(.22,.8,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;mix-blend-mode:multiply;
- background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5 0 0 0 0 .42 0 0 0 0 .3 0 0 0 .12 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.wrap{position:relative;z-index:1;width:min(1180px,calc(100% - 48px));margin:0 auto}
-.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-lo);display:flex;align-items:center;gap:14px}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
-h1,h2,h3{font-weight:300;line-height:1.05;letter-spacing:-.01em}
-h2{font-size:clamp(36px,4.2vw,54px)}
-em{font-style:italic;font-weight:400;color:var(--gold-lo)}
-.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:14px;letter-spacing:.08em;font-weight:500;padding:16px 30px;border-radius:999px;transition:transform .5s var(--ease),box-shadow .5s var(--ease),background .3s}
-.btn-ink{background:var(--ink);color:var(--paper);box-shadow:0 14px 30px rgba(43,36,28,.18)}
-.btn-ink:hover{transform:translateY(-2px);box-shadow:0 20px 40px rgba(43,36,28,.26)}
-.btn-line{border:1px solid rgba(138,106,38,.45);color:var(--ink)}
-.btn-line:hover{background:rgba(184,146,63,.08)}
-.btn .arr{display:inline-block;transition:transform .4s var(--ease)}
-.btn:hover .arr{transform:translateX(5px)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--cream);font-family:var(--serif);font-size:18px;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.wrap{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--amber)}
+h1,h2,h3{font-weight:300;line-height:1.08}
+h2{font-size:clamp(34px,4vw,52px)}
+em{font-style:italic;font-weight:300;color:var(--amber2)}
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:16px 30px;border-radius:999px;transition:transform .5s var(--ease),box-shadow .5s var(--ease),background .3s}
+.btn-amber{background:linear-gradient(135deg,#F0CD8A,#D9A85C 55%,#9A7236);color:#1A1510;box-shadow:0 14px 34px rgba(154,114,54,.25)}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(217,168,92,.32)}
+.btn-line{border:1px solid rgba(42,36,32,.35);color:var(--cream)}.hero .btn-line{border-color:rgba(242,233,220,.5);color:#F2E9DC}
+.btn-line:hover{border-color:var(--amber);color:var(--amber2)}.hero .btn-line:hover{color:#F0CD8A}
+.btn .arr{transition:transform .4s var(--ease)}.btn:hover .arr{transform:translateX(5px)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
 
-/* reveal */
-.rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease)}
-.rv.in{opacity:1;transform:none;filter:none}
-.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
-
-/* nav */
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(58,49,42,.96);backdrop-filter:blur(14px);color:var(--paper)}
-header.solid{background:rgba(246,240,230,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(138,106,38,.15)}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;color:#F2E9DC;background:rgba(20,17,14,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(217,168,92,.14)}
 header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:12px 0}
-header nav.l ul{justify-content:flex-end}
-header nav.r{display:flex;align-items:center;gap:30px}
-header.solid .wrap{padding:14px 0}
-.logo{display:flex;flex-direction:column;align-items:center;line-height:1;margin:0 40px}
-.logo .w{display:flex;align-items:center;font-family:var(--sans);font-weight:500;font-size:24px;letter-spacing:.42em}
-.logo .w img{height:38px;width:auto;margin:0 2px 0 -2px}
-header .logo .w img{filter:brightness(0) invert(.95) sepia(.3)}
-.logo small{font-family:var(--sans);font-size:9px;letter-spacing:.32em;opacity:.75;margin-top:5px}
-footer .logo{align-items:flex-start;margin:0 0 10px}
-nav ul{display:flex;gap:30px;list-style:none;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
-nav a{position:relative;padding:6px 0}
-nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .4s var(--ease)}
-nav a:hover::after{width:100%}
-.nav-cta{font-family:var(--sans);font-size:12px;letter-spacing:.1em;font-weight:500;padding:10px 20px;border-radius:999px;border:1px solid var(--gold-hi);color:var(--gold-hi)}
-.burger{display:none;background:none;border:0;cursor:pointer;width:40px;height:40px}
-.burger{position:absolute;right:24px;top:22px}
-.burger i{display:block;height:1.5px;background:var(--paper);margin:7px 8px}
+nav ul{display:flex;gap:28px;list-style:none;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#D8CDBD}
+footer nav ul,footer ul{color:var(--mute)}
+nav a{position:relative;padding:6px 0;transition:color .3s}nav a:hover{color:#F0CD8A}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--amber);transition:width .4s var(--ease)}nav a:hover::after{width:100%}
+nav.l ul{justify-content:flex-end}nav.r{display:flex;align-items:center;gap:28px}
+.nav-cta{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding:10px 20px;border-radius:999px;border:1px solid #D9A85C;color:#F0CD8A}
+.logo{display:flex;align-items:center;gap:12px;margin:0 36px}
+.logo img{height:36px;width:auto;filter:brightness(0) invert(.92) sepia(.4) saturate(1.3)}
+.logo .t{display:flex;flex-direction:column;line-height:1}
+.logo .t b{font-family:var(--sans);font-weight:500;font-size:22px;letter-spacing:.44em}
+.logo .t small{font-family:var(--sans);font-size:8.5px;letter-spacing:.34em;color:#D9A85C;margin-top:5px}
+footer .logo img{filter:none}footer .logo .t small{color:var(--amber2)}
+.burger{display:none;position:absolute;right:24px;top:18px;background:none;border:0;cursor:pointer;width:40px;height:40px}
+.burger i{display:block;height:1.5px;background:#F2E9DC;margin:7px 8px}
+#mnav{display:none;position:fixed;inset:0;z-index:60;color:#F2E9DC;background:rgba(20,17,14,.97);padding:90px 36px;font-family:var(--sans);font-size:20px;letter-spacing:.14em;text-transform:uppercase}
+#mnav a{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+#mnav.open{display:block}
+#mclose{position:absolute;right:28px;top:26px;background:none;border:0;color:#F2E9DC;font-size:30px;cursor:pointer}
 
 /* hero */
-.hero{position:relative;padding:calc(100vw * 625 / 1536 - 120px + 130px) 0 56px;overflow:hidden;background:url("img/hero-top.jpg") center top/100% auto no-repeat}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(245,239,231,0) 0,rgba(245,239,231,0) calc(100vw * 625 / 1536 - 200px),rgba(245,239,231,.9) calc(100vw * 625 / 1536 - 60px),var(--paper) calc(100vw * 625 / 1536))}
-.hero .grid{display:block;position:relative;z-index:1}
-.hero .full{display:none}
-.hero .txt{max-width:760px;margin:0 auto;text-align:center}
-.hero .name{justify-content:center}
-.hero p{margin-left:auto;margin-right:auto}
-.hero .acts{justify-content:center}
-.hero .full{position:relative;width:100%;margin:0;aspect-ratio:1536/625;overflow:hidden;border-radius:26px;box-shadow:0 30px 70px rgba(70,50,20,.14)}
-.hero .full img{width:100%;height:100%;object-fit:cover;display:block}
-
-
-@keyframes kb{to{transform:scale(1.06)}}
-.hero .grid{position:relative;z-index:1}
-.hero .name{font-family:var(--sans);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2);margin-bottom:14px;display:flex;align-items:center;gap:12px}
-.hero .name::before{content:"✦";color:var(--gold-lo);font-size:12px}
-.slogan{font-family:"Great Vibes",cursive;font-size:38px;color:var(--gold-lo);margin:-10px 0 22px}
-.hero h1{font-size:clamp(36px,3.6vw,52px);margin-bottom:16px}
-.hero h1 .line{display:block;overflow:hidden}
-.hero h1 .line span{display:block;transform:translateY(110%);animation:rise 1.3s var(--ease) forwards}
-.hero h1 .line:nth-child(2) span{animation-delay:.15s}.hero h1 .line:nth-child(3) span{animation-delay:.3s}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:140px 0 90px;overflow:hidden;background:url("img/hero.jpg") center/cover no-repeat}
+.hero{color:#F2E9DC}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,14,.3) 0%,rgba(20,17,14,0) 30%,rgba(20,17,14,.5) 72%,rgba(20,17,14,.6) 100%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(rgba(244,238,229,0),var(--bg))}
+.hero em{color:#F0CD8A}.hero .eyebrow{color:#F0CD8A}.hero .eyebrow::before{background:#F0CD8A}
+.hero .wrap{position:relative;z-index:1;max-width:820px;margin-left:max(24px,calc((100% - 1180px)/2))}
+.hero h1{font-size:clamp(36px,4.4vw,62px);margin:14px 0 18px;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.hero h1 .line{display:block;overflow:hidden}.hero h1 .line span{display:block;transform:translateY(110%);animation:rise 1.2s var(--ease) forwards}
+.hero h1 .line:nth-child(2) span{animation-delay:.12s}
 @keyframes rise{to{transform:none}}
-.hero p{max-width:560px;font-size:19px;color:var(--ink-2);margin-bottom:26px}
-.hero .acts{display:flex;gap:16px;flex-wrap:wrap}
-.hero p{text-shadow:0 1px 0 rgba(255,255,255,.5)}
-.hero .scroll{position:absolute;left:0;bottom:36px;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:14px}
-.hero .scroll i{width:1px;height:54px;background:linear-gradient(var(--gold),transparent);display:block;animation:pulse 2.4s ease-in-out infinite}
+.hero p{max-width:560px;font-size:21px;color:#E6DCCC;margin-bottom:30px}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap}
+.hero .scroll{position:absolute;right:24px;bottom:34px;font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#E6DCCC;display:flex;align-items:center;gap:12px;z-index:1}
+.hero .scroll i{width:1px;height:50px;background:linear-gradient(var(--amber),transparent);animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
 
-/* a rajzolódó telefon */
-.sketch{position:relative;width:min(100%,340px);justify-self:center;aspect-ratio:520/1060}
-.sketch svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.sketch path{fill:none;stroke:var(--gold-lo);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;vector-effect:non-scaling-stroke}
-.sketch .screen{position:absolute;inset:0;border-radius:13.5%/6.6%;overflow:hidden;background:#FBF7F0;opacity:0;clip-path:inset(0 0 100% 0);
- box-shadow:0 50px 100px rgba(70,50,20,.18),0 0 0 2px rgba(138,106,38,.55);transition:clip-path 2.2s var(--ease),opacity .4s}
-.sketch.fill .screen{opacity:1;clip-path:inset(0 0 0 0)}
-.sketch.fill svg{transition:opacity 1.6s;opacity:.12}
-.sketch .screen .pad{padding:14% 8% 0}
-.screen .top{display:flex;justify-content:space-between;align-items:center;font-style:italic;font-size:clamp(18px,2.2vw,26px);margin-bottom:5%}
-.screen .top b{display:block;width:26px;height:1.5px;background:var(--ink);margin:5px 0}
-.screen .hr{aspect-ratio:440/330;border-radius:5%;position:relative;overflow:hidden;background:linear-gradient(160deg,#CBB89A 0%,#937F5F 48%,#5C4A33 100%)}
-.screen .hr::before{content:"";position:absolute;right:-15%;top:-20%;width:65%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,240,205,.85),rgba(255,240,205,0) 70%)}
-.screen .hr small{position:absolute;left:7%;top:8%;font-family:var(--sans);font-size:clamp(8px,1vw,11px);letter-spacing:.22em;color:#FBF3E2}
-.screen .hr h4{position:absolute;left:7%;bottom:30%;font-style:italic;font-weight:400;font-size:clamp(22px,2.8vw,36px);line-height:1;color:#FBF3E2}
-.screen .hr span{position:absolute;left:7%;bottom:9%;padding:4% 7%;border:1px solid #FBF3E2;border-radius:999px;font-family:var(--sans);font-size:clamp(7px,.9vw,10px);letter-spacing:.16em;color:#FBF3E2}
-.screen .cards{display:flex;gap:4.5%;margin-top:6%}
-.screen .cards i{flex:1;aspect-ratio:1;border-radius:9%;background:#E6DAC5}
-.screen .cards i:nth-child(2){background:linear-gradient(160deg,var(--gold-hi),var(--gold-lo))}
-.screen p{margin-top:7%;font-size:clamp(11px,1.4vw,17px);line-height:1.35;color:var(--ink-2)}
-.screen .ft{margin-top:7%;height:11%;border-radius:4%;background:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:clamp(8px,1vw,12px);letter-spacing:.2em;color:#F6F0E6;height:52px}
-.tip{position:absolute;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--gold);opacity:0;
- box-shadow:0 0 0 6px rgba(184,146,63,.18),0 0 18px rgba(184,146,63,.7)}
-
-/* pillérek csík */
-.strip{border-top:1px solid rgba(138,106,38,.18);border-bottom:1px solid rgba(138,106,38,.18);background:var(--paper-2);overflow:hidden}
-.strip .track{display:flex;gap:70px;width:max-content;padding:16px 0;animation:marq 38s linear infinite;font-family:var(--sans);font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-2)}
-.strip span::before{content:"✦";color:var(--gold-lo);margin-right:70px;font-size:11px}
+/* strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);overflow:hidden}
+.strip .track{display:flex;gap:60px;width:max-content;padding:14px 0;animation:marq 36s linear infinite;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream2)}
+.strip span::before{content:"✦";color:var(--amber);margin-right:60px;font-size:10px}
 @keyframes marq{to{transform:translateX(-50%)}}
 
-section{padding:64px 0}
-.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:36px}
-.head p{font-size:21px;color:var(--ink-2);max-width:460px}
+section{padding:88px 0}
+.head{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;margin-bottom:40px}
+.head p{font-size:19px;color:var(--cream2)}
 
-/* szolgáltatások */
-.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{position:relative;padding:32px 28px 30px;border:1px solid rgba(138,106,38,.22);border-radius:22px;background:rgba(255,255,255,.35);transition:transform .6s var(--ease),box-shadow .6s var(--ease),background .4s;overflow:hidden}
-.card::after{content:"";position:absolute;left:36px;right:36px;bottom:0;height:1px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease)}
-.card:hover{transform:translateY(-6px);background:rgba(255,255,255,.6);box-shadow:0 30px 60px rgba(70,50,20,.12)}
-.card:hover::after{transform:scaleX(1)}
-.card .n{font-family:var(--sans);font-size:12px;letter-spacing:.3em;color:var(--gold-lo);margin-bottom:16px}
-.card h3{font-size:30px;margin-bottom:10px}
-.card p{color:var(--ink-2);font-size:17px;margin-bottom:16px}
-.card ul{list-style:none;font-family:var(--sans);font-size:14px;color:var(--ink-2);display:grid;gap:9px}
-.card li::before{content:"—";color:var(--gold);margin-right:10px}
-.card.feat{background:var(--paper-2);border-color:var(--gold)}
+/* intro / about */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.intro .big{font-size:clamp(28px,2.8vw,40px);font-style:italic;font-weight:300;line-height:1.2}
+.intro p{color:var(--cream2);margin-bottom:14px}
+.intro .num{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.num b{display:block;font-weight:300;font-size:44px;line-height:1;color:var(--amber2)}
+.num span{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
 
-/* rólam */
-.about-sec{position:relative;padding:90px 0;overflow:hidden}
-.about-sec::before{content:"";position:absolute;inset:0;background:url("img/waves-bg.jpg") center/cover no-repeat}
-.about-sec::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--paper) 0%,rgba(245,239,231,.2) 22%,rgba(245,239,231,.2) 78%,var(--paper) 100%)}
-.about{position:relative;z-index:1;max-width:720px;margin:0 auto;text-align:center;padding:36px 40px;background:rgba(245,239,231,.72);border-radius:24px;backdrop-filter:blur(6px)}.about .eyebrow{justify-content:center}.about p{margin:0 auto}
-.about blockquote{font-size:clamp(26px,2.6vw,36px);font-style:italic;font-weight:300;line-height:1.2;margin:18px 0 18px}
-.about p{color:var(--ink-2);font-size:20px;max-width:520px}
-.sig{font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin:18px 0 22px}
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;padding:30px 28px;border:1px solid var(--line);border-radius:18px;background:var(--bg3);transition:transform .6s var(--ease),border-color .4s,box-shadow .6s var(--ease);overflow:hidden}
+.card::after{content:"";position:absolute;left:28px;right:28px;bottom:0;height:1px;background:linear-gradient(90deg,var(--amber),transparent);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease)}
+.card:hover{transform:translateY(-6px);border-color:rgba(154,114,54,.6);box-shadow:0 30px 60px rgba(70,50,20,.14)}.card:hover::after{transform:scaleX(1)}
+.card .n{font-family:var(--sans);font-size:11px;letter-spacing:.3em;color:var(--amber);margin-bottom:14px}
+.card h3{font-size:28px;margin-bottom:8px}
+.card p{color:var(--cream2);font-size:17px;margin-bottom:14px}
+.card ul{list-style:none;font-family:var(--sans);font-size:13.5px;color:var(--cream2);display:grid;gap:8px}
+.card li::before{content:"—";color:var(--amber);margin-right:10px}
+.card.feat{border-color:rgba(154,114,54,.6);background:linear-gradient(180deg,#FBF2E2,var(--bg3))}
+.card.feat .tag{position:absolute;right:22px;top:22px;font-family:var(--sans);font-size:10px;letter-spacing:.2em;padding:6px 12px;border-radius:999px;background:#D9A85C;color:#1A1510}
 
-/* miért én */
-.why{background:var(--paper-2);color:var(--ink);border:1px solid rgba(111,92,76,.18);border-radius:28px;padding:64px 0}
-.why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-.why em{color:var(--gold-lo)}
-.why p{color:var(--ink-2);font-size:18px;margin-bottom:16px}
-.why .big{font-size:26px;font-style:italic;color:var(--ink);border-left:1px solid var(--gold);padding-left:22px;margin:24px 0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
-.stat b{display:block;font-weight:300;font-size:48px;line-height:1;color:var(--gold-lo)}
-.stat span{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.step{padding:26px 24px 0 0;border-right:1px solid var(--line);margin-right:24px}.step:last-child{border:0;margin:0}
+.step .k{font-size:50px;font-weight:300;line-height:1;color:var(--amber);font-style:italic}
+.step h3{font-size:25px;margin:10px 0 6px}.step p{font-size:16.5px;color:var(--cream2)}
 
-/* folyamat */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(138,106,38,.22)}
-.step{padding:26px 24px 0 0;border-right:1px solid rgba(138,106,38,.18);margin-right:28px}
-.step:last-child{border:0;margin:0}
-.step .k{font-size:54px;font-weight:300;line-height:1;color:var(--gold);font-style:italic}
-.step h3{font-size:26px;margin:10px 0 6px}
-.step p{font-size:17px;color:var(--ink-2)}
+/* why – image band */
+.band{position:relative;padding:100px 0;overflow:hidden;background:url("img/bg-soft.jpg") center/cover no-repeat}
+.band::before{content:"";position:absolute;inset:0;background:linear-gradient(var(--bg) 0,rgba(244,238,229,.78) 25%,rgba(244,238,229,.78) 75%,var(--bg) 100%)}
+.band .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.band p{color:var(--cream2);margin-bottom:14px}
+.band .q{font-size:clamp(24px,2.4vw,32px);font-style:italic;border-left:1px solid var(--amber);padding-left:22px;margin:20px 0}
+.ticks{list-style:none;display:grid;gap:12px;margin-top:10px;font-family:var(--sans);font-size:15px;color:var(--cream)}
+.ticks li{display:flex;gap:14px;align-items:flex-start}
+.ticks li::before{content:"✦";color:var(--amber);font-size:12px;margin-top:4px}
 
-/* cta */
-.cta{position:relative;text-align:center;padding:110px 0;overflow:hidden}
-.cta::before{content:"";position:absolute;inset:0;background:url("img/leaves-bg.jpg") center/cover no-repeat}
-.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--paper) 0%,rgba(245,239,231,.35) 30%,rgba(245,239,231,.35) 70%,var(--paper) 100%)}
-.cta .wrap{position:relative;z-index:1}
-.cta h2{font-size:clamp(40px,5vw,64px);margin-bottom:16px}
-.cta p{font-size:20px;color:var(--ink-2);max-width:520px;margin:0 auto 28px}
+/* works */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.work{position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,#E9DECC,#D4C5AE);display:flex;align-items:flex-end;padding:24px;transition:transform .6s var(--ease)}
+.work:hover{transform:translateY(-6px)}
+.work::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 70% 20%,rgba(255,250,240,.7),transparent 70%)}
+.work div{position:relative}.work b{font-weight:300;font-size:26px;display:block}
+.work span{display:block;margin-bottom:6px;font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
 
-footer{border-top:1px solid rgba(138,106,38,.2);padding:36px 0 28px;font-family:var(--sans);font-size:13px;color:var(--mute)}
-footer .wrap{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
-footer ul{display:flex;gap:26px;list-style:none;flex-wrap:wrap}
-footer .logo img{height:44px}
+/* quote form */
+.quote{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.quote p{color:var(--cream2);margin-bottom:16px}
+.quote .meta{font-family:var(--sans);font-size:14px;color:var(--cream2);display:grid;gap:10px;margin-top:26px}
+.quote .meta a{color:var(--amber2)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .full{grid-column:1/-1}
+label{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+input,select,textarea{width:100%;background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--cream);font-family:var(--sans);font-size:15px;outline:0;transition:border-color .3s}
+input:focus,select:focus,textarea:focus{border-color:var(--amber)}
+select option{background:#fff}
+textarea{min-height:140px;resize:vertical}
+.chk{display:flex;gap:10px;align-items:flex-start;font-family:var(--sans);font-size:13px;color:var(--cream2);grid-column:1/-1}
+.chk input{width:auto;margin-top:3px}
+
+footer{padding:40px 0 30px;font-family:var(--sans);font-size:13px;color:var(--mute)}
+footer .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+footer ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+footer .logo{margin:0 0 10px}
 
 @media(max-width:960px){
-  header nav.l,header nav.r{display:none}header .wrap{grid-template-columns:1fr}.burger{display:block}
-  .hero{padding-top:130px;min-height:auto}.hero{padding-top:calc(100vw * 625 / 1536 + 92px);background:url("img/hero-top.jpg") center 72px/100% auto no-repeat}.hero::before{background:linear-gradient(rgba(245,239,231,0) calc(100vw * 625 / 1536 + 50px),var(--paper) calc(100vw * 625 / 1536 + 82px))}.hero .txt{text-align:left}.hero .name,.hero .acts{justify-content:flex-start}.hero p{margin-left:0}
-  .sketch{width:min(78%,360px)}
-  .head,.why .wrap,footer .wrap{grid-template-columns:1fr;gap:36px}
-  .cards3{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}.step{border:0;margin:0}
-  section{padding:90px 0}.why{border-radius:24px}
+  nav.l,nav.r{display:none}header .wrap{grid-template-columns:1fr}.logo{margin:0}.burger{display:block}
+  .hero{padding:130px 0 70px;background-image:url("img/hero-m.jpg");background-position:50% center}.hero::before{background:linear-gradient(180deg,rgba(20,17,14,.3) 0%,rgba(20,17,14,.1) 30%,rgba(20,17,14,.7) 60%,var(--bg) 100%)}
+  .head,.intro,.band .wrap,.quote .wrap,footer .wrap{grid-template-columns:1fr;gap:30px}
+  .cards,.works{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step{border:0;margin:0}
+  form{grid-template-columns:1fr}section{padding:64px 0}.band{padding:70px 0}
 }
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none;filter:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
-<header id="hdr"><div class="wrap">
-  <nav class="l"><ul><li><a href="index.html">Főoldal</a></li><li><a href="rolam.html">Rólam</a></li><li><a href="szolgaltatasok.html">Szolgáltatások</a></li></ul></nav>
-  <a class="logo" href="index.html"><span class="w">MALE<img src="img/mark.png" alt="M">I</span><small>WEB DESIGN &amp; FRONTEND</small></a>
-  <nav class="r"><ul><li><a href="munkaim.html">Munkáim</a></li><li><a href="kapcsolat.html">Kapcsolat</a></li></ul><a class="nav-cta" href="kapcsolat.html">Kérj ajánlatot</a></nav>
-  <button class="burger" aria-label="Menü"><i></i><i></i></button>
+<header><div class="wrap">
+  <nav class="l"><ul><li><a href="#rolam">Rólam</a></li><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#folyamat">Folyamat</a></li></ul></nav>
+  <a class="logo" href="#top"><img src="img/mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>
+  <nav class="r"><ul><li><a href="#munkaim">Munkáim</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul><a class="nav-cta" href="#ajanlat">Kérj ajánlatot</a></nav>
+  <button class="burger" aria-label="Menü" onclick="document.getElementById('mnav').classList.add('open')"><i></i><i></i></button>
 </div></header>
+<div id="mnav"><button id="mclose" aria-label="Bezár" onclick="this.parentNode.classList.remove('open')">×</button>
+  <a href="#rolam">Rólam</a><a href="#szolgaltatasok">Szolgáltatások</a><a href="#folyamat">Folyamat</a><a href="#munkaim">Munkáim</a><a href="#ajanlat">Ajánlatkérés</a><a href="#kapcsolat">Kapcsolat</a></div>
 
-<section class="hero"><div class="wrap grid">
-  <div class="full rv in"><img src="img/hero-top.jpg" alt="MALEMI — webdesign és frontend fejlesztés"></div>
-  <div class="txt">
-    <div class="name">Egyedi weboldal készítés</div>
-    <h1><span class="line"><span>Webdesign és frontend</span></span><span class="line"><span>fejlesztés, ami</span></span><span class="line"><span><em>érted dolgozik.</em></span></span></h1>
-    <p class="rv in">Modern, gyors és mobilbarát weboldalak vállalkozásoknak — tervezéstől a kódig egy kézben, sablonok nélkül.</p>
-    <div class="acts rv in d1"><a class="btn btn-ink" href="kapcsolat.html">Kérj ajánlatot <span class="arr">→</span></a><a class="btn btn-line" href="szolgaltatasok.html">Szolgáltatások</a></div>
-  </div>
-</div></section>
+<section class="hero" id="top"><div class="wrap">
+  <div class="eyebrow">Egyedi weboldal készítés</div>
+  <h1><span class="line"><span>Weboldal, ami nem csak szép,</span></span><span class="line"><span><em>hanem ügyfelet hoz.</em></span></span></h1>
+  <p>Webdesign és frontend fejlesztés egy kézben: gyors, mobilbarát, keresőbarát oldalak vállalkozásoknak – sablonok és felesleges bővítmények nélkül.</p>
+  <div class="acts"><a class="btn btn-amber" href="#ajanlat">Ingyenes konzultáció <span class="arr">→</span></a><a class="btn btn-line" href="#munkaim">Munkáim</a></div>
+</div><div class="scroll"><i></i>Görgess</div></section>
 
 <div class="strip"><div class="track">
-  <span>Webdesign</span><span>Frontend fejlesztés</span><span>Kézzel írt kód</span><span>Reszponzív</span><span>SEO-kész</span><span>Egy kézben</span>
-  <span>Webdesign</span><span>Frontend fejlesztés</span><span>Kézzel írt kód</span><span>Reszponzív</span><span>SEO-kész</span><span>Egy kézben</span>
+  <span>Webdesign</span><span>Frontend fejlesztés</span><span>Kézzel írt kód</span><span>Mobilbarát</span><span>SEO-kész</span><span>Gyors betöltés</span><span>Egy kézben</span>
+  <span>Webdesign</span><span>Frontend fejlesztés</span><span>Kézzel írt kód</span><span>Mobilbarát</span><span>SEO-kész</span><span>Gyors betöltés</span><span>Egy kézben</span>
 </div></div>
 
-<section id="szolgaltatasok"><div class="wrap">
-  <div class="head"><div><div class="eyebrow rv">Szolgáltatások</div><h2 class="rv d1">Amit <em>kínálok</em> neked</h2></div>
-  <p class="rv d2">Minden vállalkozás egyedi — ezért minden megoldásom személyre szabott. Nincs sablon, nincs plugin-halom: csak az, amit megterveztem.</p></div>
-  <div class="cards3">
-    <div class="card rv"><div class="n">01</div><h3>Webdesign &amp; fejlesztés</h3><p>Egyedi weboldal, amit ugyanaz a kéz tervez és kódol.</p><ul><li>Teljesen egyedi dizájn</li><li>Kézzel írt, tiszta kód</li><li>Reszponzív, gyors betöltés</li><li>SEO-barát szerkezet</li></ul></div>
-    <div class="card feat rv d1"><div class="n">02 · Csomag</div><h3>Design + Fejlesztés</h3><p>Vizuális identitás és egyedi weboldal — egy kézből, egységes rendszerként.</p><ul><li>Teljes vizuális identitás</li><li>Egyedi webdesign és fejlesztés</li><li>Design és web stílusútmutató</li><li>1 hónap garancia és támogatás</li></ul></div>
-    <div class="card rv d2"><div class="n">03</div><h3>Vizuális identitás</h3><p>Logó, színpaletta, tipográfia — stratégiai alapokon.</p><ul><li>3 logókoncepció</li><li>Teljes színpaletta</li><li>Tipográfiai rendszer</li></ul></div>
-  </div>
-  <div style="margin-top:26px" class="rv"><a class="btn btn-line" href="szolgaltatasok.html">Összes szolgáltatás <span class="arr">→</span></a></div>
-</div></section>
-
-<section id="rolam" class="about-sec" style="padding:90px 0"><div class="wrap about">
+<section id="rolam"><div class="wrap intro">
   <div>
     <div class="eyebrow rv">Rólam</div>
-    <h2 class="rv d1">Szenvedélyesen hiszek <em>a dizájn erejében</em></h2>
-    <blockquote class="rv d2">„A jó dizájn nem csak szép — hanem működik."</blockquote>
-    <p class="rv d2">Webdesigner és frontend fejlesztő vagyok. Hiszem, hogy minden vállalkozásnak megvan a saját hangja — az én dolgom, hogy ezt megtaláljuk, és egy olyan weboldallá formáljuk, ami valóban érted dolgozik.</p>
-    <div class="sig rv d3">— Alexandra</div>
-    <a class="btn btn-ink rv d3" href="rolam.html">Ismerj meg jobban <span class="arr">→</span></a>
+    <h2 class="rv d1" style="margin:12px 0 18px">Szia, Alexandra vagyok – a MALEMI mögött <em>egy ember áll.</em></h2>
+    <p class="big rv d2">„Nem sablont igazítok. A vállalkozásodhoz tervezek, és azt kódolom le.”</p>
+  </div>
+  <div>
+    <p class="rv">Webdesigner és frontend fejlesztő vagyok. Nálam a tervezés és a kivitelezés nem válik ketté: ugyanaz a kéz rajzolja meg az oldalt, amelyik megírja a kódját. Így a végeredmény pontosan az lesz, amit a terven láttál – nem egy „majdnem olyan” sablonverzió.</p>
+    <p class="rv d1">Hiszem, hogy egy jó weboldal nem dísz, hanem munkaeszköz: bizalmat épít, keresőben megtalálnak, és a látogatóból ügyfelet csinál. Ezért minden projektet a céljaidból indítok, nem a színekből.</p>
+    <div class="num rv d2"><div><b>1</b><span>kéz, tervtől kódig</span></div><div><b>0</b><span>sablon és plugin</span></div><div><b>100%</b><span>egyedi megoldás</span></div></div>
   </div>
 </div></section>
 
-<div class="wrap"><div class="why">
-  <div class="wrap">
-    <div><div class="eyebrow rv">Miért én?</div><h2 class="rv d1">Nem sablont <em>igazítok</em> — weboldalt építek.</h2>
-      <div class="stats rv d2"><div class="stat"><b>1</b><span>kéz, tervtől kódig</span></div><div class="stat"><b>0</b><span>sablon, 0 plugin</span></div><div class="stat"><b>100<small style="font-size:.5em">%</small></b><span>egyedi</span></div></div>
-    </div>
-    <div>
-      <p class="rv">Sok weboldal ugyanabból a pár tucat sablonból épül fel — csak a színek és a logó cserélődik. Én máshogy dolgozom: a vizuális nyelvet a nulláról építem fel, a weboldal minden apró részletéig.</p>
-      <p class="rv d1">A weboldalaimat kézzel kódolom, nem plugin-halmazokra építem — ez gyorsabb betöltést, tisztább kódot és pontosan azt jelenti, amit megterveztem. A design és a fejlesztés nálam egy kézben van, így tipográfia, színvilág és hangnem egységes rendszerként működik.</p>
-      <div class="big rv d2">Ez az a fajta figyelem, amit egy igényes vállalkozás megérdemel.</div>
-      <a class="btn btn-line rv d3" href="szolgaltatasok.html">Szolgáltatások <span class="arr">→</span></a>
-    </div>
+<section id="szolgaltatasok" style="padding-top:0"><div class="wrap">
+  <div class="head"><div><div class="eyebrow rv">Szolgáltatások</div><h2 class="rv d1">Minden, amire egy <em>profi weboldalhoz</em> szükséged van</h2></div>
+  <p class="rv d2">Egyedi webdesign, kézzel kódolt frontend és vizuális identitás – külön-külön vagy egy csomagban, mindig a te céljaidra szabva.</p></div>
+  <div class="cards">
+    <div class="card rv"><div class="n">01</div><h3>Egyedi weboldal készítés</h3><p>Bemutatkozó oldal, landing page vagy többoldalas céges weboldal – a nulláról, a te márkádra tervezve.</p>
+      <ul><li>Egyedi webdesign, nem sablon</li><li>Kézzel írt, tiszta HTML/CSS/JS</li><li>Mobilbarát, reszponzív felépítés</li><li>Gyors betöltés, SEO-kész szerkezet</li><li>Kapcsolati űrlap, Google Maps, social</li></ul></div>
+    <div class="card feat rv d1"><span class="tag">Népszerű</span><div class="n">02 · Csomag</div><h3>Design + Fejlesztés</h3><p>Vizuális identitás és weboldal egy kézből, egységes rendszerként – így minden részlet összeáll.</p>
+      <ul><li>Logó és színvilág, tipográfia</li><li>Egyedi webdesign és fejlesztés</li><li>Social media alap arculat</li><li>Domain- és tárhely-beállítás</li><li>1 hónap támogatás átadás után</li></ul></div>
+    <div class="card rv d2"><div class="n">03</div><h3>Weboldal frissítés és karbantartás</h3><p>Van már oldalad, csak elavult vagy lassú? Új köntöst, gyorsítást és mobil-optimalizálást kap.</p>
+      <ul><li>Meglévő oldal újratervezése</li><li>Sebesség- és mobil-optimalizálás</li><li>Tartalomfrissítés, új aloldalak</li><li>Hibajavítás, böngésző-kompatibilitás</li></ul></div>
+  </div>
+</div></section>
+
+<section id="folyamat" style="padding-top:0"><div class="wrap">
+  <div class="head"><div><div class="eyebrow rv">Folyamat</div><h2 class="rv d1">Négy lépés az <em>új weboldaladig</em></h2></div><p class="rv d2">Átlátható mérföldkövek, meglepetések nélkül. Az első beszélgetés ingyenes és kötelezettségmentes.</p></div>
+  <div class="steps">
+    <div class="step rv"><div class="k">01</div><h3>Ismerkedés</h3><p>Megbeszéljük, mit csinál a vállalkozásod, kiknek szól, és mit kell elérnie az oldalnak.</p></div>
+    <div class="step rv d1"><div class="k">02</div><h3>Koncepció</h3><p>Szerkezet, szövegváz és vizuális irány – látod, mielőtt egy sor kód megszületne.</p></div>
+    <div class="step rv d2"><div class="k">03</div><h3>Tervezés és kódolás</h3><p>Egyedi design, majd a kézzel írt, gyors és mobilbarát megvalósítás – közben folyamatos egyeztetéssel.</p></div>
+    <div class="step rv d3"><div class="k">04</div><h3>Átadás és támogatás</h3><p>Élesítés a saját domaineden, minden fájl a tiéd, és utána is elérhető maradok.</p></div>
+  </div>
+</div></section>
+
+<div class="band" id="miert"><div class="wrap">
+  <div><div class="eyebrow rv">Miért a MALEMI?</div><h2 class="rv d1" style="margin:12px 0 18px">Mert a weboldalad az <em>első benyomás</em> – és csak egy van belőle.</h2>
+    <div class="q rv d2">A látogató pár másodperc alatt dönt: marad, vagy továbbkattint. Én azért dolgozom, hogy maradjon.</div></div>
+  <div>
+    <p class="rv">A legtöbb weboldal ugyanabból a pár tucat sablonból készül, és ez látszik is rajta. A MALEMI-nél minden oldal egyedi: a tipográfiától a gombok animációjáig a te márkádhoz igazítva.</p>
+    <ul class="ticks rv d1">
+      <li>Kézzel írt kód – nincs lassú plugin-halom, nincs feltörhető sablon</li>
+      <li>Mobilon is tökéletes: a látogatóid többsége telefonról érkezik</li>
+      <li>SEO-barát felépítés, hogy a Google is megtaláljon</li>
+      <li>Egy kapcsolattartó az első vázlattól az élesítésig</li>
+      <li>Fix ár, fix határidő – nincsenek rejtett költségek</li>
+    </ul>
   </div>
 </div></div>
 
-<section id="folyamat"><div class="wrap">
-  <div class="head"><div><div class="eyebrow rv">Folyamat</div><h2 class="rv d1">A közös munka <em>menete</em></h2></div><p class="rv d2">Négy lépés, átlátható mérföldkövekkel — az első beszélgetés ingyenes és kötelezettségmentes.</p></div>
-  <div class="steps">
-    <div class="step rv"><div class="k">01</div><h3>Ismerkedés</h3><p>Ingyenes konzultáció: megértem a vállalkozásod, a céljaid és a célközönséged.</p></div>
-    <div class="step rv d1"><div class="k">02</div><h3>Stratégia</h3><p>Piac- és versenytárs-elemzés, mielőtt egyetlen pixel is a helyére kerülne.</p></div>
-    <div class="step rv d2"><div class="k">03</div><h3>Tervezés</h3><p>Koncepciók bemutatása, visszajelzés, finomhangolás — veled együtt.</p></div>
-    <div class="step rv d3"><div class="k">04</div><h3>Átadás</h3><p>Minden fájl és útmutató a tiéd, és utána is elérhető maradok.</p></div>
+<section id="munkaim"><div class="wrap">
+  <div class="head"><div><div class="eyebrow rv">Munkáim</div><h2 class="rv d1">Néhány <em>elkészült</em> weboldal</h2></div><p class="rv d2">Ipari cégtől szolgáltatóig – mindegyik egyedi tervezés, kézzel kódolva.</p></div>
+  <div class="works">
+    <a class="work rv" href="#"><div><span>Céges weboldal</span><b>Brick Field Kft.</b></div></a>
+    <a class="work rv d1" href="#"><div><span>Szolgáltató oldal</span><b>Clear Wolf Production</b></div></a>
+    <a class="work rv d2" href="#"><div><span>Prémium one-page</span><b>Újítók Kft.</b></div></a>
   </div>
 </div></section>
 
-<section class="cta"><div class="wrap">
-  <div class="eyebrow rv" style="justify-content:center">Kezdjük el</div>
-  <h2 class="rv d1">Készen állsz a <em>következő szintre?</em></h2>
-  <p class="rv d2">Egy rövid üzenet elég, hogy elindítsuk a folyamatot. Írd meg, miben segíthetek!</p>
-  <a class="btn btn-ink rv d3" href="kapcsolat.html">Kérj ajánlatot <span class="arr">→</span></a>
+<section id="ajanlat" class="quote"><div class="wrap">
+  <div>
+    <div class="eyebrow rv">Ajánlatkérés</div>
+    <h2 class="rv d1" style="margin:12px 0 18px">Kérj <em>ingyenes</em> ajánlatot</h2>
+    <p class="rv d2">Írd le röviden, mivel foglalkozol és mit szeretnél az oldaltól – 24 órán belül válaszolok, és egy rövid egyeztetés után konkrét ajánlatot küldök, fix árral és határidővel.</p>
+    <div class="meta rv d3" id="kapcsolat">
+      <div>✉ &nbsp;<a href="mailto:contact@lexadesign.hu">contact@lexadesign.hu</a></div>
+      <div>◷ &nbsp;Válaszidő: 24 órán belül</div>
+      <div>✦ &nbsp;Az első konzultáció ingyenes és kötelezettségmentes</div>
+    </div>
+  </div>
+  <form class="rv d1" action="https://formsubmit.co/contact@lexadesign.hu" method="POST">
+    <input type="hidden" name="_subject" value="Új ajánlatkérés – MALEMI weboldal">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
+    <div><label for="nev">Név</label><input id="nev" name="Név" type="text" required></div>
+    <div><label for="email">E-mail</label><input id="email" name="E-mail" type="email" required></div>
+    <div><label for="ceg">Vállalkozás / tevékenység</label><input id="ceg" name="Vállalkozás" type="text"></div>
+    <div><label for="tipus">Mire van szükséged?</label><select id="tipus" name="Típus"><option>Új weboldal</option><option>Meglévő oldal újratervezése</option><option>Design + fejlesztés csomag</option><option>Még nem tudom – beszéljük meg</option></select></div>
+    <div class="full"><label for="uzenet">Üzenet</label><textarea id="uzenet" name="Üzenet" placeholder="Pár mondat a vállalkozásodról és arról, mit szeretnél elérni az oldallal…"></textarea></div>
+    <label class="chk"><input type="checkbox" required> Elolvastam és elfogadom az <a href="adatvedelem.html" style="color:var(--amber2);text-decoration:underline">adatkezelési tájékoztatót</a>.</label>
+    <div class="full"><button class="btn btn-amber" type="submit">Ajánlatot kérek <span class="arr">→</span></button></div>
+  </form>
 </div></section>
 
 <footer><div class="wrap">
-  <div><a class="logo" href="index.html"><span class="w" style="color:var(--ink)">MALE<img src="img/mark.png" alt="M">I</span><small>WEB DESIGN &amp; FRONTEND</small></a>© 2025 MALEMI · lexadesign.hu · Minden jog fenntartva</div>
-  <ul><li><a href="index.html">Főoldal</a></li><li><a href="rolam.html">Rólam</a></li><li><a href="szolgaltatasok.html">Szolgáltatások</a></li><li><a href="kapcsolat.html">Kapcsolat</a></li><li><a href="impresszum.html">Impresszum</a></li><li><a href="adatvedelem.html">Adatvédelem</a></li><li><a href="cookie.html">Cookie</a></li></ul>
+  <div><a class="logo" href="#top"><img src="img/mark.png" alt=""><span class="t"><b>MALEMI</b><small>WEB DESIGN &amp; FRONTEND</small></span></a>© 2025 MALEMI · Egyedi weboldal készítés · Minden jog fenntartva</div>
+  <ul><li><a href="#rolam">Rólam</a></li><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#munkaim">Munkáim</a></li><li><a href="#ajanlat">Ajánlatkérés</a></li><li><a href="impresszum.html">Impresszum</a></li><li><a href="adatvedelem.html">Adatvédelem</a></li></ul>
 </div></footer>
 
 <script>
-// fejléc
-const hdr=document.getElementById('hdr');
-
-// bejelentkező elemek
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('#mnav a').forEach(a=>a.onclick=()=>document.getElementById('mnav').classList.remove('open'));
 </script>
 </body>
 </html>
