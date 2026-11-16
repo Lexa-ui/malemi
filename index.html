@@ -237,6 +237,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:400px){.ck{flex-direction:column;align-items:flex-start;gap:10px}}
 
 .plain{background:#EDE4D7;border-top:1px solid rgba(168,144,111,.18);border-bottom:1px solid rgba(168,144,111,.18)}
+
+.prices-head{scroll-margin-top:26px;margin:52px auto 0;max-width:640px;text-align:center}
+.prices-head .eyebrow{justify-content:center}.prices-head .eyebrow::before{content:"";width:56px;height:1px;background:var(--tan)}
+.prices-head h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,2.8vw,38px);line-height:1.15;margin:6px 0 10px;color:var(--ink)}
+.prices-head p{color:var(--ink);font-size:14.5px;text-shadow:0 1px 0 rgba(255,255,255,.7)}
+.prices{margin-top:22px}
+.about .wrap{grid-template-areas:"pic head" "pic body";grid-template-rows:auto 1fr;row-gap:0}
+.about .pic{grid-area:pic;align-self:center}.about .ahead{grid-area:head;align-self:end}.about .abody{grid-area:body}
+.about .ahead h2{margin-bottom:14px}
+@media(max-width:960px){.about .wrap{grid-template-areas:"head" "pic" "body";grid-template-rows:auto;row-gap:22px}}
 </style>
 </head>
 <body>
@@ -267,7 +277,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <div class="card rv d1"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2 0-.8-.5-1.3-.5-2 0-1 .8-1.5 2-1.5h1.5A4 4 0 0 0 21 11.5 8.5 8.5 0 0 0 12 3z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10.5" cy="7" r="1.2"/><circle cx="15.5" cy="7.5" r="1.2"/></svg><h3>Logó és arculattervezés</h3><p>Logó, színvilág, tipográfia – hogy a vállalkozásod megjegyezhető legyen, és mindenhol ugyanazt az igényes képet mutassa.</p><ul><li>Logókoncepciók és véglegesítés</li><li>Szín- és tipográfiai rendszer</li><li>Névjegy, szórólap, bejegyzés-grafika</li></ul></div>
     <div class="card rv d2"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M8 10.5h5M10.5 8v5"/></svg><h3>Keresőoptimalizálás (SEO)</h3><p>Hiába szép az oldal, ha nem találják. Gyors, tiszta szerkezet és jól felépített tartalom, hogy a Google előre sorolja.</p><ul><li>SEO-kész felépítés és sebesség</li><li>Kulcsszavas tartalomszerkezet</li><li>Google Search Console beállítás</li></ul></div>
   </div>
-  <div id="arak" class="prices rv">
+  <div id="arak" class="prices-head rv">
+    <div class="eyebrow">Árak</div>
+    <h3>Mennyibe kerül egy <em>egyedi weboldal?</em></h3>
+    <p>Tájékoztató kezdőárak. Minden csomag egyedi tervezést, kézzel írt kódot, mobilbarát kialakítást és alap keresőoptimalizálást tartalmaz.</p>
+  </div>
+  <div class="prices rv">
     <div class="price"><small>Bemutatkozó weboldal</small><b>149 000 Ft-tól</b><span>1 oldal, 4–6 szekció, űrlap, mobilbarát, SEO-alap</span></div>
     <div class="price feat"><small>Céges weboldal</small><b>249 000 Ft-tól</b><span>3–6 aloldal, egyedi design, galéria, térkép, Search Console</span></div>
     <div class="price"><small>Weboldal + arculat</small><b>349 000 Ft-tól</b><span>Logó, színek, tipográfia + teljes weboldal egy kézből</span></div>
@@ -277,9 +292,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <section id="rolam" class="about"><div class="wrap">
   <div class="pic rv"><img src="portre.jpg" alt="Alexandra – a MALEMI webdesignere és frontend fejlesztője" loading="lazy"></div>
-  <div>
+  <div class="ahead">
     <div class="eyebrow rv">Rólam</div>
     <h2 class="rv d1">Egy ember, aki <em>megtervezi és le is kódolja</em> az oldaladat</h2>
+  </div>
+  <div class="abody">
     <p class="q rv d2">„A jó dizájn nem csak szép — hanem működik.”</p>
     <p class="rv d2">Alexandra vagyok, a MALEMI webdesignere és frontend fejlesztője. A MALEMI a PR Mérnöki Iroda Kft. webdesign szolgáltatása – így mögötted egy megbízható, működő cég áll, a tervezést és a kódolást pedig az első vázlattól az élesítésig én viszem. Gyerekkorom óta rajzolok – a digitális tervezésben a rajzolás precizitását és szabadságát találtam meg. Az első projektjeim után megtanultam: a szép vizuál önmagában kevés, stratégia is kell mögé.</p>
     <p class="rv d2">Nálam a tervezés és a kivitelezés nem válik ketté: ugyanaz a kéz rajzolja meg az oldalt, amelyik megírja a kódját. Nincs „elveszett a fordításban” – pontosan azt kapod, amit a terven láttál, és végig egy emberrel beszélsz.</p>
@@ -378,6 +395,8 @@ if(form){form.addEventListener('submit',async e=>{
 const ck=document.getElementById('ck');
 try{if(!localStorage.getItem('malemi_ck'))ck.hidden=false}catch(_){ck.hidden=false}
 document.getElementById('ckok').addEventListener('click',()=>{ck.hidden=true;try{localStorage.setItem('malemi_ck','1')}catch(_){}});
+const setPad=()=>{const H=document.getElementById('hdr'),was=H.classList.contains('solid');H.classList.add('solid');const h=H.offsetHeight;if(!was)H.classList.remove('solid');document.documentElement.style.scrollPaddingTop=(h+4)+'px'};
+setPad();addEventListener('resize',setPad);addEventListener('load',setPad);
 </script>
 </body>
 </html>
