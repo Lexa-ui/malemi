@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Weboldal készítés, ami ügyfelet hoz | MALEMI – Egyedi webdesign vállalkozásoknak</title>
-<meta name="description" content="Egyedi weboldal készítés vállalkozásoknak 149 000 Ft-tól. Gyors, mobilbarát, Google-barát oldal, ami bizalmat épít és ügyfelet hoz. Megtervezem – és csak akkor fizetsz, ha tetszik.">
+<meta name="description" content="Egyedi weboldal készítés vállalkozásoknak 149 000 Ft + ÁFA-tól. Gyors, mobilbarát, Google-barát oldal, ami bizalmat épít és ügyfelet hoz. Ingyenes konzultáció, fix ár, fix határidő.">
 <link rel="canonical" href="https://malemi.hu/">
 <meta property="og:type" content="website"><meta property="og:locale" content="hu_HU">
 <meta property="og:title" content="MALEMI – Webdesign és frontend fejlesztés">
-<meta property="og:description" content="Egyedi, kézzel kódolt weboldalak vállalkozásoknak. Megtervezem, és ha tetszik, megrendeled.">
+<meta property="og:description" content="Egyedi weboldalak vállalkozásoknak, a nulláról felépítve. Ingyenes konzultáció, fix ár, fix határidő.">
 <meta property="og:image" content="hero.jpg">
 <meta name="theme-color" content="#F6F1EA">
 <link rel="icon" type="image/png" href="mark.png">
@@ -79,7 +79,7 @@ nav.r{display:flex;align-items:center;gap:28px}
 
 .hero h1{font-size:clamp(34px,3.6vw,52px);line-height:1.14;}
 .hero h1 .nw{white-space:nowrap}
-@media(min-width:701px) and (max-width:960px){.cards{grid-template-columns:repeat(3,1fr);gap:12px}.card{padding:22px 16px}.prices{grid-template-columns:repeat(3,1fr)}.about .wrap{grid-template-columns:.6fr 1.4fr}.about .pic{max-width:260px}.cta .grid{grid-template-columns:1fr 1fr}.hero{padding-top:150px}}
+@media(min-width:701px) and (max-width:960px){.cards{grid-template-columns:repeat(3,1fr);gap:12px}.card{padding:22px 16px}.prices{grid-template-columns:repeat(2,1fr)}.about .wrap{grid-template-columns:.6fr 1.4fr}.about .pic{max-width:260px}.cta .grid{grid-template-columns:1fr 1fr}.hero{padding-top:150px}}
 @media(max-width:700px){.hero h1 .nw{white-space:normal}.hero h1 .line{overflow:visible}}
 .hero h1{color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35);line-height:1.08;margin-bottom:16px}
 .hero h1 em{color:#EBD2A6}
@@ -118,7 +118,8 @@ section{padding:56px 0}
 .price{padding:20px 22px;border-radius:12px;background:rgba(255,253,250,.9);border:1px solid var(--line);text-align:center}
 .price.feat{border-color:var(--tan);box-shadow:0 20px 50px rgba(100,80,50,.14)}
 .price small{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--tan2);font-weight:600;margin-bottom:8px}
-.price b{display:block;font-family:var(--serif);font-weight:500;font-size:34px;line-height:1;margin-bottom:10px}
+.price b{display:block;font-family:var(--serif);font-weight:500;font-size:34px;line-height:1;margin-bottom:4px}
+.price .vat{display:block;font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tan2);font-weight:600;margin-bottom:10px}
 .price span{display:block;font-size:13px;color:var(--ink2)}
 .note{max-width:760px;margin:16px auto 0;font-size:13px;color:var(--ink2);background:rgba(255,253,250,.85);border-radius:8px;padding:12px 18px;text-align:center}
 
@@ -199,7 +200,7 @@ footer .soc svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-widt
   form{grid-template-columns:1fr}section{padding:52px 0}
   footer .wrap{grid-template-columns:1fr;text-align:center;justify-items:center}footer .flogo{flex-direction:column;text-align:center}
 }
-@media(min-width:701px) and (max-width:960px){.cards{grid-template-columns:repeat(3,1fr);gap:12px}.card{padding:22px 16px}.prices{grid-template-columns:repeat(3,1fr)}.about .wrap{grid-template-columns:.6fr 1.4fr}.about .pic{max-width:260px}.cta .grid{grid-template-columns:1fr 1fr}.hero{padding-top:150px}}
+@media(min-width:701px) and (max-width:960px){.cards{grid-template-columns:repeat(3,1fr);gap:12px}.card{padding:22px 16px}.prices{grid-template-columns:repeat(2,1fr)}.about .wrap{grid-template-columns:.6fr 1.4fr}.about .pic{max-width:260px}.cta .grid{grid-template-columns:1fr 1fr}.hero{padding-top:150px}}
 @media(max-width:700px){.hero .eyebrow::before,.hero .eyebrow::after{display:none}.hero .tags{display:none}.hero p{font-size:15px}}
 @media(max-width:480px){.steps{grid-template-columns:1fr}.glass{padding:22px}.hero h1{font-size:34px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
@@ -242,11 +243,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .prices-head .eyebrow{justify-content:center}.prices-head .eyebrow::before{content:"";width:56px;height:1px;background:var(--tan)}
 .prices-head h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,2.8vw,38px);line-height:1.15;margin:6px 0 10px;color:var(--ink)}
 .prices-head p{color:var(--ink);font-size:14.5px;text-shadow:0 1px 0 rgba(255,255,255,.7)}
-.prices{margin-top:22px}
+.prices{margin-top:22px;grid-template-columns:repeat(4,1fr)}
+@media(max-width:1100px){.prices{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.prices{grid-template-columns:1fr}}
 .about .wrap{grid-template-areas:"pic head" "pic body";grid-template-rows:auto 1fr;row-gap:0}
 .about .pic{grid-area:pic;align-self:center}.about .ahead{grid-area:head;align-self:end}.about .abody{grid-area:body}
 .about .ahead h2{margin-bottom:14px}
 @media(max-width:960px){.about .wrap{grid-template-areas:"head" "pic" "body";grid-template-rows:auto;row-gap:22px}}
+
+.note-plain{max-width:640px;margin:18px auto 0;font-size:12.5px;color:var(--ink2);text-align:center;text-shadow:0 1px 0 rgba(255,255,255,.8)}
 </style>
 </head>
 <body>
@@ -263,80 +268,81 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <section class="hero" id="top"><div class="wrap"><div class="txt">
   <div class="eyebrow">Egyedi weboldal készítés vállalkozásoknak</div>
   <h1><span class="line"><span class="nw">Weboldal, ami nem csak szép,</span></span><span class="line"><span><em>hanem ügyfelet is hoz.</em></span></span></h1>
-  <p>A látogatóid 3 másodperc alatt döntenek rólad. Én olyan oldalt tervezek és kódolok, ami ebben a 3 másodpercben bizalmat épít – és megtalálják a Google-ben. <strong>Megtervezem, és csak akkor fizetsz, ha tetszik.</strong></p>
-  <div class="acts"><a class="btn btn-t" href="#ajanlat">Kérem az ingyenes tervet <span class="arr">→</span></a><a class="btn btn-o" href="#arak">Árak és csomagok</a></div>
+  <p>Szép, gyors és telefonon is jól működő weboldalt készítek vállalkozásoknak – olyat, amitől a látogatóból ügyfél lesz. <strong>Az első beszélgetés ingyenes, az árat pedig előre, írásban megkapod.</strong></p>
+  <div class="acts"><a class="btn btn-t" href="#ajanlat">Kérem az ingyenes konzultációt <span class="arr">→</span></a><a class="btn btn-o" href="#arak">Árak és csomagok</a></div>
   <div class="tags"><span>Fix ár, fix határidő</span><span>Mobilbarát</span><span>Google-barát</span></div>
 </div></div></section>
 
 <section id="szolgaltatasok" class="svc c"><div class="wrap">
   <div class="eyebrow rv">Szolgáltatások</div>
   <h2 class="rv d1">Minden, ami egy <em>ügyfélhozó weboldalhoz</em> kell</h2>
-  <p class="lead rv d2">Nem sablont kapsz, hanem egy rád szabott oldalt, ami szép, gyors és dolgozik érted. Weboldal, arculat és keresőoptimalizálás – egy kézben, egy kapcsolattartóval.</p>
+  <p class="lead rv d2">Mindent egy helyen intézhetsz: megtervezem az oldaladat, elkészítem, és segítek, hogy a Google-ben is megtaláljanak.</p>
   <div class="cards">
-    <div class="card rv"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4M7 9l3 3-3 3M12 15h5"/></svg><h3>Egyedi weboldal készítés</h3><p>Bemutatkozó oldal, landing page vagy céges weboldal, ami első pillantásra profinak mutat – és telefonon is tökéletes.</p><ul><li>Egyedi design, kézzel írt kód</li><li>Mobilbarát, gyors betöltés</li><li>Kapcsolati űrlap, Google térkép</li></ul></div>
-    <div class="card rv d1"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2 0-.8-.5-1.3-.5-2 0-1 .8-1.5 2-1.5h1.5A4 4 0 0 0 21 11.5 8.5 8.5 0 0 0 12 3z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10.5" cy="7" r="1.2"/><circle cx="15.5" cy="7.5" r="1.2"/></svg><h3>Logó és arculattervezés</h3><p>Logó, színvilág, tipográfia – hogy a vállalkozásod megjegyezhető legyen, és mindenhol ugyanazt az igényes képet mutassa.</p><ul><li>Logókoncepciók és véglegesítés</li><li>Szín- és tipográfiai rendszer</li><li>Névjegy, szórólap, bejegyzés-grafika</li></ul></div>
-    <div class="card rv d2"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M8 10.5h5M10.5 8v5"/></svg><h3>Keresőoptimalizálás (SEO)</h3><p>Hiába szép az oldal, ha nem találják. Gyors, tiszta szerkezet és jól felépített tartalom, hogy a Google előre sorolja.</p><ul><li>SEO-kész felépítés és sebesség</li><li>Kulcsszavas tartalomszerkezet</li><li>Google Search Console beállítás</li></ul></div>
+    <div class="card rv"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4M7 9l3 3-3 3M12 15h5"/></svg><h3>Egyedi weboldal készítés</h3><p>Bemutatkozó oldal vagy céges weboldal, ami jól mutat, és telefonon is kényelmesen használható.</p><ul><li>Egyedi design, a nulláról felépítve</li><li>Mobilbarát, gyors betöltés</li><li>Kapcsolati űrlap, Google térkép</li></ul></div>
+    <div class="card rv d1"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2 0-.8-.5-1.3-.5-2 0-1 .8-1.5 2-1.5h1.5A4 4 0 0 0 21 11.5 8.5 8.5 0 0 0 12 3z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10.5" cy="7" r="1.2"/><circle cx="15.5" cy="7.5" r="1.2"/></svg><h3>Logó és arculattervezés</h3><p>Ha még nincs logód, vagy frissítenéd, megtervezem – hozzá illő színekkel és betűkkel, hogy mindenhol felismerjenek.</p><ul><li>Logókoncepciók és véglegesítés</li><li>Szín- és tipográfiai rendszer</li><li>Névjegy, szórólap, bejegyzés-grafika</li></ul></div>
+    <div class="card rv d2"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M8 10.5h5M10.5 8v5"/></svg><h3>Keresőoptimalizálás (SEO)</h3><p>Hiába szép az oldal, ha nem találják meg. Úgy építem fel, hogy a Google is jól értse, és előrébb sorolja.</p><ul><li>SEO-kész felépítés és sebesség</li><li>Kulcsszavas tartalomszerkezet</li><li>Google Search Console beállítás</li></ul></div>
   </div>
   <div id="arak" class="prices-head rv">
     <div class="eyebrow">Árak</div>
     <h3>Mennyibe kerül egy <em>egyedi weboldal?</em></h3>
-    <p>Tájékoztató kezdőárak. Minden csomag egyedi tervezést, kézzel írt kódot, mobilbarát kialakítást és alap keresőoptimalizálást tartalmaz.</p>
+    <p>Tájékoztató nettó kezdőárak. Minden oldalt egyedileg tervezek – nem sablonból, nem bővítményekből, hanem a nulláról felépítve. Mindegyik mobilbarát, és megkapja az alap keresőoptimalizálást.</p>
   </div>
   <div class="prices rv">
-    <div class="price"><small>Bemutatkozó weboldal</small><b>149 000 Ft-tól</b><span>1 oldal, 4–6 szekció, űrlap, mobilbarát, SEO-alap</span></div>
-    <div class="price feat"><small>Céges weboldal</small><b>249 000 Ft-tól</b><span>3–6 aloldal, egyedi design, galéria, térkép, Search Console</span></div>
-    <div class="price"><small>Weboldal + arculat</small><b>349 000 Ft-tól</b><span>Logó, színek, tipográfia + teljes weboldal egy kézből</span></div>
+    <div class="price"><small>Bemutatkozó weboldal</small><b>149 000 Ft-tól</b><em class="vat">+ ÁFA</em><span>1 oldal, 4–6 szekció, űrlap, mobilbarát, SEO-alap</span></div>
+    <div class="price feat"><small>Céges weboldal</small><b>249 000 Ft-tól</b><em class="vat">+ ÁFA</em><span>3–6 aloldal, egyedi design, galéria, térkép, Search Console</span></div>
+    <div class="price"><small>Weboldal megújítása</small><b>129 000 Ft-tól</b><em class="vat">+ ÁFA</em><span>Ha a mostani oldalad már elavult, készítek helyette egy új, modern oldalt – a meglévő tartalmaidból</span></div>
+    <div class="price"><small>Logótervezés</small><b>59 000 Ft-tól</b><em class="vat">+ ÁFA</em><span>Egyedi logó a vállalkozásodnak – önállóan vagy a weboldal mellé, koncepciókkal és véglegesítéssel</span></div>
   </div>
-  <p class="note rv"><strong>Kockázat nélkül:</strong> az első látványtervet ingyen elkészítem – ha tetszik, megrendeled, ha nem, nem fizetsz semmit. A pontos ajánlat a konzultáció után, fix áron és fix határidővel érkezik – benne az ÁFA-tartalommal és a bruttó végösszeggel. A szolgáltatást a PR Mérnöki Iroda Kft. nyújtja és számlázza.</p>
+  <p class="note-plain rv">Az árak nettó árak (+ ÁFA). A pontos ajánlatot a konzultáció után küldöm. A szolgáltatást a PR Mérnöki Iroda Kft. nyújtja és számlázza.</p>
 </div></section>
 
 <section id="rolam" class="about"><div class="wrap">
   <div class="pic rv"><img src="portre.jpg" alt="Alexandra – a MALEMI webdesignere és frontend fejlesztője" loading="lazy"></div>
   <div class="ahead">
     <div class="eyebrow rv">Rólam</div>
-    <h2 class="rv d1">Egy ember, aki <em>megtervezi és le is kódolja</em> az oldaladat</h2>
+    <h2 class="rv d1">Egy ember, aki <em>megtervezi és el is készíti</em> az oldaladat</h2>
   </div>
   <div class="abody">
     <p class="q rv d2">„A jó dizájn nem csak szép — hanem működik.”</p>
-    <p class="rv d2">Alexandra vagyok, a MALEMI webdesignere és frontend fejlesztője. A MALEMI a PR Mérnöki Iroda Kft. webdesign szolgáltatása – így mögötted egy megbízható, működő cég áll, a tervezést és a kódolást pedig az első vázlattól az élesítésig én viszem. Gyerekkorom óta rajzolok – a digitális tervezésben a rajzolás precizitását és szabadságát találtam meg. Az első projektjeim után megtanultam: a szép vizuál önmagában kevés, stratégia is kell mögé.</p>
-    <p class="rv d2">Nálam a tervezés és a kivitelezés nem válik ketté: ugyanaz a kéz rajzolja meg az oldalt, amelyik megírja a kódját. Nincs „elveszett a fordításban” – pontosan azt kapod, amit a terven láttál, és végig egy emberrel beszélsz.</p>
-    <ul class="vals rv d3"><li><span><b>Tudatosság minden pixelben</b> – minden döntés mögött stratégia áll.</span></li><li><span><b>Az egyediség nem kompromisszum</b> – a márkád saját hangján szóló megoldás.</span></li><li><span><b>Hosszú távú gondolkodás</b> – időtálló rendszer, ami veled fejlődik.</span></li></ul>
+    <p class="rv d2">Alexandra vagyok, a MALEMI webdesignere. A MALEMI a PR Mérnöki Iroda Kft. szolgáltatása, így egy működő cég áll mögötted, de végig velem beszélsz. Gyerekkorom óta rajzolok, és ma is ugyanaz az öröm hajt: egy ötletből olyan oldalt készíteni, ami tényleg működik.</p>
+    <p class="rv d2">Nálam nem kell egyik embertől a másikhoz futkosnod: én tervezem meg az oldalt, én készítem el, és én is adom át. Pontosan azt kapod, amit a terven jóváhagytál.</p>
+    <ul class="vals rv d3"><li><span><b>Figyelek a részletekre</b> – a betűmérettől a gombokig.</span></li><li><span><b>Hozzád igazítom</b> – a te vállalkozásodhoz, nem egy sablonhoz.</span></li><li><span><b>Hosszú távra tervezek</b> – az oldalad később is bővíthető.</span></li></ul>
     <a class="btn btn-o rv d3" href="#ajanlat">Beszéljünk az oldaladról <span class="arr">→</span></a>
   </div>
 </div></section>
 
 <section id="miert" class="why"><div class="wrap">
   <div class="eyebrow rv">Miért a MALEMI?</div>
-  <h2 class="rv d1">Miért egyedi weboldalt, <em>ne sablont?</em></h2>
+  <h2 class="rv d1">Miért érdemes <em>egyedi weboldalt</em> készíttetni?</h2>
   <div class="big rv d2">Mert az ügyfeled a weboldaladból ítéli meg, mennyire vagy profi – még mielőtt beszélne veled.</div>
-  <p class="rv d2">A sablonoldalak egyformák, lassúak és azonnal felismerhetők. Az egyedi oldal a te hangodon szól, gyorsan tölt, mobilon is hibátlan, és úgy vezeti a látogatót, hogy a végén felvegye veled a kapcsolatot.</p>
+  <p class="rv d2">Az első benyomás a weboldaladon dől el. Egy egyedi oldal rólad szól: a te színeiddel, a te hangodon, és úgy vezeti a látogatót, hogy a végén megkeressen.</p>
   <ul class="vals rv d3">
-    <li><span><b>Kézzel írt kód</b> – nincs lassú plugin-halom, nincs feltörhető sablon</span></li>
-    <li><span><b>Mobilon is tökéletes</b> – a látogatóid többsége telefonról érkezik</span></li>
-    <li><span><b>SEO-barát felépítés</b> – hogy a Google is megtaláljon</span></li>
-    <li><span><b>Fix ár, fix határidő</b> – nincsenek rejtett költségek</span></li>
-    <li><span><b>Átadás után sem hagylak magadra</b> – 1 hónap támogatás jár minden oldalhoz</span></li>
+    <li><span><b>A nulláról felépítve</b> – nem sablonból, nem bővítményekből</span></li>
+    <li><span><b>Mobilon is jól működik</b> – a legtöbben telefonról néznek</span></li>
+    <li><span><b>Google-barát felépítés</b> – hogy megtaláljanak</span></li>
+    <li><span><b>Fix ár, fix határidő</b> – előre tudod, mire számíts</span></li>
+    <li><span><b>Az átadás után is számíthatsz rám</b> – 1 hónapig díjmentesen segítek</span></li>
   </ul>
 </div></section>
 
 <section id="folyamat" class="plain"><div class="wrap">
   <div class="eyebrow rv">Folyamat</div>
   <h2 class="rv d1">Négy lépés az <em>új weboldaladig</em></h2>
-  <p class="rv d2" style="color:var(--ink2);max-width:560px;margin-top:12px">Átlátható, nyugodt folyamat, meglepetések nélkül – neked csak válaszolnod kell pár kérdésre, a többi az én dolgom.</p>
+  <p class="rv d2" style="color:var(--ink2);max-width:560px;margin-top:12px">Nyugodt, átlátható menet – neked csak pár kérdésre kell válaszolnod, a többit én intézem.</p>
   <div class="steps">
-    <div class="step rv"><div class="k">01</div><h3>Ismerkedés</h3><p>Ingyenes beszélgetés: megértem a vállalkozásod, a céljaid és azt, kiket szeretnél elérni.</p></div>
-    <div class="step rv d1"><div class="k">02</div><h3>Ingyenes látványterv</h3><p>Megmutatom, hogyan nézne ki az oldalad. Ha tetszik, indulunk – ha nem, nem fizetsz.</p></div>
-    <div class="step rv d2"><div class="k">03</div><h3>Tervezés és kódolás</h3><p>Egyedi design és kézzel írt, gyors kód – közben bármikor beleszólhatsz.</p></div>
+    <div class="step rv"><div class="k">01</div><h3>Ismerkedés</h3><p>Ingyenes beszélgetés, ahol elmondod, mivel foglalkozol, és milyen oldalt szeretnél.</p></div>
+    <div class="step rv d1"><div class="k">02</div><h3>Fix áras ajánlat</h3><p>Írásban megkapod, mit, mennyiért és mikorra készítek el. Ha elfogadod, indulunk.</p></div>
+    <div class="step rv d2"><div class="k">03</div><h3>Tervezés és elkészítés</h3><p>Először megmutatom a látványtervet, és ha jóváhagytad, elkészítem az oldalt.</p></div>
     <div class="step rv d3"><div class="k">04</div><h3>Élesítés és támogatás</h3><p>Felkerül a saját domainedre, minden fájl a tiéd, és 1 hónapig díjmentesen segítek.</p></div>
   </div>
 </div></section>
 
 <section id="ajanlat" class="cta"><div class="wrap">
-  <div class="top rv"><div class="eyebrow" style="justify-content:center">Kezdjük el</div><h2>Kezdjük el – <em>kockázat nélkül</em></h2><p>Írj pár sort, és 48 órán belül jelentkezem egy ingyenes konzultációval.</p></div>
+  <div class="top rv"><div class="eyebrow" style="justify-content:center">Kezdjük el</div><h2>Kezdjük el – <em>kötelezettség nélkül</em></h2><p>Írj pár sort, és 48 órán belül jelentkezem egy ingyenes konzultációval.</p></div>
   <div class="grid">
     <div class="glass rv" id="kapcsolat">
-      <h3>Kérd az <em>ingyenes</em> látványtervet</h3>
-      <p>Írd le röviden, mivel foglalkozol és mit szeretnél az oldaltól. Minden üzenetet személyesen olvasok, és egy rövid egyeztetés után elkészítem az első tervet – fix árral és határidővel. Havonta csak néhány új projektet vállalok, hogy minden oldalra jusson elég figyelem.</p>
+      <h3>Kérj <em>ingyenes</em> konzultációt</h3>
+      <p>Írd meg röviden, mivel foglalkozol, és milyen oldalt szeretnél. Minden üzenetet én olvasok, és egy rövid beszélgetés után küldöm a fix áras ajánlatot. Havonta csak néhány új munkát vállalok, hogy mindegyikre jusson elég időm.</p>
       <div class="meta">
         <div>✉ &nbsp;<a href="mailto:malemiweb@gmail.com">malemiweb@gmail.com</a></div>
         <div>☏ &nbsp;<a href="tel:+36204577808">+36 20 457 7808</a></div>
@@ -349,11 +355,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <div><label for="nev">Név</label><input id="nev" name="name" type="text" autocomplete="name" required></div>
       <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
       <div><label for="ceg">Vállalkozás / tevékenység</label><input id="ceg" name="Vállalkozás" type="text"></div>
-      <div><label for="tipus">Mire van szükséged?</label><select id="tipus" name="Típus"><option>Egyedi weboldal</option><option>Logó / arculat</option><option>Weboldal + arculat csomag</option><option>Keresőoptimalizálás</option><option>Meglévő oldal újratervezése</option><option>Egyéb – beszéljük meg</option></select></div>
+      <div><label for="tipus">Mire van szükséged?</label><select id="tipus" name="Típus"><option>Egyedi weboldal</option><option>Logótervezés</option><option>Keresőoptimalizálás</option><option>Weboldal megújítása</option><option>Egyéb – beszéljük meg</option></select></div>
       <div class="full"><label for="uzenet">Üzenet</label><textarea id="uzenet" name="Üzenet" placeholder="Pár mondat a vállalkozásodról és arról, mit szeretnél elérni az oldallal…"></textarea></div>
       <div class="full"><label for="tel">Telefonszám (nem kötelező)</label><input id="tel" name="telefon" type="tel" autocomplete="tel"></div>
       <label class="chk"><input type="checkbox" required> Elolvastam és elfogadom az <a href="adatvedelem.html" target="_blank" style="color:var(--tan2);text-decoration:underline">adatkezelési tájékoztatót</a>.</label>
-      <div class="full"><button class="btn btn-t" type="submit">Kérem az ingyenes tervet <span class="arr">→</span></button></div>
+      <div class="full"><button class="btn btn-t" type="submit">Kérem az ajánlatot <span class="arr">→</span></button></div>
       <div class="full form-msg" id="formMsg" role="status" aria-live="polite"></div>
     </form>
   </div>
